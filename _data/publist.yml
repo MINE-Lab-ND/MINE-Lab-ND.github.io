@@ -1,3 +1,133 @@
+- title: "Artificial Intelligence in Spectroscopy: Advancing Chemistry from Prediction to Generation and Beyond"
+  image: 
+  description: ""
+  authors: Kehan Guo, Yili Shen, Gisela Abigail Gonzalez-Montiel, Yue Huang, Yujun Zhou, Mihir Surve, Zhichun Guo, Prayel Das, Nitesh V Chawla, Olaf Wiest, Xiangliang Zhang
+  link:
+    url: 
+    display: IJCAI 2025 Survey Track
+  highlight: 0
+  news1:
+
+- title: "Evaluating and Mitigating Bias in AI-based Medical Text Generation"
+  image: 
+  description: ""
+  authors: Xiuying Chen, Tairan Wang, Juexiao Zhou, Xin Gao, Xiangliang Zhang
+  link:
+    url: 
+    display: Nature Computational Science, 2025
+  highlight: 0
+  news1:
+
+- title: "WildlifeLookup: A Chatbot Facilitating Wildlife Management with Accessible Data and Insights"
+  image: 
+  description: ""
+  authors: Xiangqi Wang, Tianyu Yang, Jason Rohr, Brett Scheffers, Nitesh Chawla, Xiangliang Zhang
+  link:
+    url: 
+    display: WSDM 2025 (Demo)
+  highlight: 0
+  news1:
+
+- title: "Improving Reaction Prediction through Chemically Aware Transfer Learning"
+  image: 
+  description: ""
+  authors: Angus Keto, Taicheng Guo, Nils Gönnheimer, Xiangliang Zhang, Elizabeth H. Krenske, Olaf Wiest
+  link:
+    url: https://doi.org/10.1039/D4DD00412D
+    display: Digital Discovery, 2025
+  highlight: 0
+  news1:
+
+- title: "DataGen: Unified Synthetic Dataset Generation via Large Language Models"
+  image: 
+  description: ""
+  authors: Yue Huang, Siyuan Wu, Chujie Gao, Dongping Chen, Qihui Zhang, Yao Wan, Tianyi Zhou, Chaowei Xiao, Jianfeng Gao, Xiangliang Zhang, Lichao Sun
+  link:
+    url: 
+    display: ICLR 2025
+  highlight: 0
+  news1:
+
+- title: "Justice or Prejudice? Quantifying Biases in LLM-as-a-Judge"
+  image: 
+  description: ""
+  authors: Jiayi Ye, Yanbo Wang, Yue Huang, Dongping Chen, Qihui Zhang, Nuno Moniz, Tian Gao, Werner Geyer, Chao Huang, Pin-Yu Chen, Nitesh V Chawla, Xiangliang Zhang
+  link:
+    url: 
+    display: ICLR 2025
+  highlight: 0
+  news1:
+
+- title: "UICopilot: Automating UI Synthesis via Hierarchical Code Generation from Webpage Designs"
+  image: 
+  description: ""
+  authors: Yi Gui, Yao Wan, Zhen Li, Zhongyi Zhang, Dongping Chen, Hongyu Zhang, Yi Su, Bohua Chen, Xing Zhou, Wenbin Jiang, Xiangliang Zhang
+  link:
+    url: 
+    display: TheWebConf 2025
+  highlight: 0
+  news1:
+
+- title: "WebCode2M: A Real-World Dataset for Code Generation from Webpage Designs"
+  image: 
+  description: ""
+  authors: Yi Gui, Zhen Li, Yao Wan, Yemin Shi, Hongyu Zhang, Yi Su, Bohua Chen, Dongping Chen, Siyuan Wu, Xing Zhou, Wenbin Jiang, Hai Jin, Xiangliang Zhang
+  link:
+    url: 
+    display: TheWebConf 2025
+  highlight: 0
+  news1:
+
+- title: "Towards Fair Graph Learning without Demographic Information"
+  image: 
+  description: ""
+  authors: Zichong Wang, Nhat Hoang, Xingyu Zhang, Kevin Bello, Xiangliang Zhang, Sundararaja Sitharama Iyengar, Wenbin Zhang
+  link:
+    url: 
+    display: AISTATS 2025
+  highlight: 0
+  news1:
+
+- title: "Unlocking the Potential of Black-box Pre-trained GNNs for Graph Few-shot Learning"
+  image: 
+  description: ""
+  authors: Qiannan Zhang, Shichao Pei, Yuan Fang, Xiangliang Zhang
+  link:
+    url: 
+    display: AAAI 2025
+  highlight: 0
+  news1:
+
+- title: "Knowledge Distillation on Graphs: A Survey"
+  image: 
+  description: ""
+  authors: Yijun Tian, Shichao Pei, Xiangliang Zhang, Chuxu Zhang, Nitesh V. Chawla
+  link:
+    url: 
+    display: ACM Computing Surveys (To appear)
+  highlight: 0
+  news1:
+
+- title: "Unveiling the power of language models in chemical research question answering"
+  image: 
+  description: ""
+  authors: Xiuying Chen, Tairan Wang, Taicheng Guo, Kehan Guo, Juexiao Zhou, Haoyang Li, Zirui Song, Xin Gao, Xiangliang Zhang
+  link:
+    url: 
+    display: Communications Chemistry, volume 8, Article number: 4 (2025)
+  highlight: 0
+  news1:
+
+- title: "Machine learning assisted plasmonic metascreen for enhanced broadband absorption in ultra-thin silicon films"
+  image: 
+  description: ""
+  authors: Ying Wu, Waqas Ahmed, Haicheng Cao, Changqing Xu, Mohamed Farhat, Muhammad Amin, Xiaohang Li, Xiangliang Zhang
+  link:
+    url: 
+    display: "Light: Science & Applications, 14, 42 (2025)"
+  highlight: 0
+  news1:
+
 - title: "Can LLMs Solve Molecule Puzzles? A Multimodal Benchmark for Molecular Structure Elucidation"
   image: intro_spectrum.png
   description: "we present MolPuzzle, a benchmark comprising 234 instances of structure elucidation, which features over 18,000 QA samples presented in a sequential puzzle-solving process, involving three interlinked subtasks: molecule understanding, spectrum interpretation, and molecule construction."
@@ -5,7 +135,7 @@
   link:
     url: https://kehanguo2.github.io/Molpuzzle.io/
     display: NeurIPS 2024 Datasets and Benchmarks Track as a <b style="color:#FF0000"><strong>spotlight</strong></b>
-  highlight: 1
+  highlight: 0
   news1: 
 
 - title: "The Best of Both Worlds: Toward an Honest and Helpful Large Language Model"
@@ -15,7 +145,7 @@
   link:
     url: https://openreview.net/forum?id=F7tGQ7b10q
     display: NeurIPS 2024
-  highlight: 1
+  highlight: 0
 
 - title: "Beyond Single Stationary Policies: Meta-Task Players as Naturally Superior Collaborators"
   image: 
@@ -33,7 +163,7 @@
   link:
     url: https://aclanthology.org/2024.emnlp-main.743/
     display: EMNLP 2024 Main
-  highlight: 1
+  highlight: 0
 
 - title: "Defending Jailbreak Prompts via In-Context Adversarial Game"
   image: ICAG.png
@@ -42,7 +172,7 @@
   link:
     url: https://arxiv.org/abs/2402.13148
     display: EMNLP 2024 Main
-  highlight: 1
+  highlight: 0
 
 - title: "RAt: Injecting Implicit Bias for Text-To-Image Prompt Refinement Models"
   image: RAt.png
@@ -51,7 +181,7 @@
   link:
     url: https://aclanthology.org/2024.emnlp-main.1144.pdf
     display: EMNLP 2024 Main
-  highlight: 1
+  highlight: 0
 
 - title: "SaSR-Net: Source-Aware Semantic Representation Network for Enhancing Audio-Visual Question Answering"
   image: SaSR.jpeg
@@ -60,7 +190,7 @@
   link:
     url: https://arxiv.org/abs/2411.04933
     display: EMNLP 2024 Findings
-  highlight: 1
+  highlight: 0
 
 - title: "Zero-Shot Relational Learning for Multimodal Knowledge Graphs"
   image: 
@@ -105,7 +235,7 @@
   link:
     url: https://dl.acm.org/doi/10.1145/3627673.3679737
     display: CIKM 2024 Full Research Paper
-  highlight: 1
+  highlight: 0
 
 - title: "Cross-Context Backdoor Attacks against Graph Prompt Learning"
   image: 
@@ -123,7 +253,7 @@
   link:
     url: https://dl.acm.org/doi/10.1145/3637528.3671850
     display: KDD 2024
-  highlight: 1
+  highlight: 0
 
 - title: "Attack-Free Evaluating and Enhancing Adversarial Robustness on Categorical Data"
   image: IGSG.png
@@ -132,7 +262,7 @@
   link:
     url: https://icml.cc/virtual/2024/poster/34854
     display: ICML 2024
-  highlight: 1
+  highlight: 0
 
 - title: "TrustLLM: Trustworthiness in Large Language Models"
   image: trustllm.png
@@ -141,7 +271,7 @@
   link:
     url: https://icml.cc/virtual/2024/poster/33637
     display: ICML 2024, HuggingFace Daily Paper No.1, Highlighted by United States Department of Homeland Security (DHS), Invited Talk at IBM Research
-  highlight: 1
+  highlight: 0
 
 - title: "Large Language Model Based Multi-Agents: A Survey of Progress and Challenges"
   image: multi_agent_survey.png
@@ -150,7 +280,7 @@
   link:
     url: https://arxiv.org/abs/2402.01680
     display: IJCAI 2024 (Survey Track)
-  highlight: 1
+  highlight: 0
 
 - title: "SceMQA: A Scientific College Entrance Level Multimodal Question Answering Benchmark"
   image: SceMQA.png
@@ -159,7 +289,7 @@
   link:
     url: https://arxiv.org/abs/2402.05138
     display: ACL 2024
-  highlight: 1
+  highlight: 0
 
 - title: "Flexible and Adaptable Summarization via Expertise Separation"
   image: 
