@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdaReasoner | Adaptive Reasoning for Flexible Thinking</title>
+    <style>
+        :root {
+            --primary-color: #1a2c42;
+            --primary-light: #2c3e50;
+            --secondary-color: #2563eb;
+            --accent-color: #3b82f6;
+            --accent-light: #60a5fa;
+            --light-bg: #f8fafc;
+            --dark-bg: #0f172a;
+            --text-color: #334155;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --success: #10b981;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 80px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
+        }
+        
+        .project-title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            background: linear-gradient(90deg, var(--white) 0%, var(--gray-200) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .project-subtitle {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 36px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+        
+        .paper-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+        
+        .paper-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .paper-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .paper-link i {
+            font-size: 1.2rem;
+        }
+        
+        .icon-container {
+            margin-bottom: 25px;
+            animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .project-icon {
+            width: 140px;
+            height: auto;
+            border-radius: 16px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-icon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+        
+        .section-title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            text-align: center;
+            position: relative;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-light) 100%);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid var(--gray-200);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .card-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        
+        .card-title i {
+            margin-right: 16px;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .card-content {
+            margin-bottom: 25px;
+            color: var(--text-color);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .key-point {
+            margin: 20px 0;
+            padding-left: 25px;
+            position: relative;
+            transition: transform 0.2s ease;
+        }
+        
+        .key-point:hover {
+            transform: translateX(5px);
+        }
+        
+        .key-point:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+        }
+        
+        .method-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 40px auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .method-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .image-caption {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 10% 90%, rgba(59, 130, 246, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.1) 0%, transparent 30%);
+        }
+        
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        
+        .flex-item {
+            flex: 1 1 300px;
+            max-width: 500px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .flex-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Institution styles */
+        .institutions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .institution {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .institution:hover {
+            transform: translateY(-5px);
+        }
+        
+        .institution img {
+            height: 70px;
+            width: auto;
+            margin-bottom: 12px;
+            filter: brightness(0.95);
+            transition: filter 0.3s ease;
+        }
+        
+        .institution:hover img {
+            filter: brightness(1.05);
+        }
+        
+        /* Table styles */
+        .results-table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .results-table th, .results-table td {
+            padding: 16px 20px;
+            text-align: center;
+        }
+        
+        .results-table th {
+            background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-light) 100%);
+            color: white;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            border: none;
+        }
+        
+        .results-table tr {
+            transition: background-color 0.2s ease;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .results-table tr:nth-child(even) {
+            background-color: var(--gray-100);
+        }
+        
+        .results-table tr:hover {
+            background-color: rgba(59, 130, 246, 0.05);
+        }
+        
+        .highlight-row {
+            background-color: rgba(52, 152, 219, 0.05) !important;
+            font-weight: 600;
+        }
+        
+        .best-value {
+            font-weight: 700;
+            color: var(--success);
+            position: relative;
+        }
+        
+        /* Authors styles */
+        .authors-list {
+            margin: 25px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .author {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            background-color: rgba(59, 130, 246, 0.08);
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .author:hover {
+            background-color: rgba(59, 130, 246, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        .author.equal::after {
+            content: "*";
+            position: relative;
+            top: -5px;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        .author-affiliation {
+            font-size: 0.95em;
+            color: var(--text-light);
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--gray-100);
+            border-radius: 8px;
+        }
+        
+        .corresponding-author {
+            margin-top: 20px;
+            font-style: italic;
+            text-align: center;
+            color: var(--text-light);
+            padding: 15px;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .equal-note {
+            font-size: 0.95em;
+            margin: 15px 0;
+            font-style: italic;
+            text-align: center;
+            color: var(--accent-color);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2.5rem;
+            }
+            
+            .flex-container {
+                flex-direction: column;
+            }
+            
+            .flex-item {
+                max-width: 100%;
+            }
+            
+            .results-table {
+                font-size: 0.9rem;
+            }
+            
+            .institutions {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .card {
+                padding: 25px;
+            }
+            
+            .paper-link {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="icon-container">
+                <img src="AdaReasoner_icon.png" alt="AdaReasoner Project Icon" class="project-icon">
+            </div>
+            <h1 class="project-title">AdaReasoner</h1>
+            <p class="project-subtitle">Adaptive Reasoning Enables More Flexible Thinking</p>
+            
+            <div class="paper-links">
+                <a href="https://arxiv.org/pdf/2505.17312" target="_blank" class="paper-link">
+                    <i class="fas fa-file-pdf"></i> arXiv
+                </a>
+                <a href="https://github.com/MINE-Lab-ND/AdaReasoner" target="_blank" class="paper-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="overview">
+        <div class="container">
+            <h2 class="section-title fade-in">Project Overview</h2>
+            <div class="card fade-in">
+                <p class="card-content">
+                    AdaReasoner is a novel, plug-and-play framework designed to automatically configure reasoning strategies for Large Language Models (LLMs). Unlike traditional prompting methods that use static configurations, AdaReasoner dynamically selects optimal parameters (like temperature and number of reasoning steps), adapting to different tasks for improved performance and robustness.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="motivation">
+        <div class="container">
+            <h2 class="section-title fade-in">Motivation</h2>
+            <div class="card fade-in">
+                <div class="card-title"><i class="fas fa-lightbulb"></i> Why AdaReasoner?</div>
+                <p class="card-content">
+                    Large language models have shown remarkable reasoning abilities, but their success often hinges on getting just the right settings—like how many steps to take, whether to think step-by-step, or how much randomness to allow. The problem? These settings are usually fixed, and what works for one task might completely fail on another. AdaReasoner was created to tackle this issue head-on: instead of relying on a one-size-fits-all approach, it learns to adapt the reasoning strategy to each specific question, making the model more flexible, reliable, and effective across a wide range of tasks.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contributions">
+        <div class="container">
+            <h2 class="section-title fade-in">Key Contributions</h2>
+            <div class="card fade-in">
+                <div class="card-title"><i class="fas fa-award"></i> Main Contributions</div>
+                <div class="key-point">
+                    AdaReasoner is an LLM-agnostic plugin that automates adaptive reasoning configurations for tasks requiring diverse types of thinking, implemented as a reinforcement learning framework with a factorized action space.
+                </div>
+                <div class="key-point">
+                    Its training is data-efficient yet scalable, requiring only a small number of samples for each task aided by the use of the Boltzmann exploration mechanism.
+                </div>
+                <div class="key-point">
+                    Extensive evaluations on diverse tasks show that AdaReasoner outperforms standard Chain-of-Thought (CoT) and other baselines, and sustains strong out-of-distribution (OOD) performance.
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="core-idea">
+        <div class="container">
+            <h2 class="section-title fade-in">Core Idea</h2>
+            <div class="card fade-in">
+                <div class="card-title"><i class="fas fa-brain"></i> Adaptive Reasoning</div>
+                <p class="card-content">
+                    AdaReasoner introduces adaptive reasoning through a model-agnostic, reinforcement learning (RL)-based policy system. Its main innovations include:
+                </p>
+                <div class="key-point">
+                    <strong>Factorized Action Space:</strong> Separates reasoning parameters (e.g., temperature, steps) to simplify and speed up policy learning.
+                </div>
+                <div class="key-point">
+                    <strong>Targeted Exploration Strategy:</strong> Guides exploration towards the most influential configurations.
+                </div>
+                <div class="key-point">
+                    <strong>Reward Model:</strong> Trained to predict the quality of reasoning outcomes, enabling efficient training with only a few examples.
+                </div>
+                
+                <div class="method-container">
+                    <img src="method.png" alt="AdaReasoner Method Diagram" class="method-image">
+                    <p class="image-caption">Figure: Overview of AdaReasoner's architecture and workflow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="technical-highlights">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Highlights</h2>
+            <div class="flex-container">
+                <div class="flex-item card fade-in">
+                    <div class="card-title"><i class="fas fa-cogs"></i> RL Framework</div>
+                    <p class="card-content">
+                        Learns to select the best configuration for each prompt using reward signals from a pre-trained model.
+                    </p>
+                </div>
+                <div class="flex-item card fade-in">
+                    <div class="card-title"><i class="fas fa-bolt"></i> Sample Efficiency</div>
+                    <p class="card-content">
+                        Achieves strong performance with minimal supervision and data.
+                    </p>
+                </div>
+                <div class="flex-item card fade-in">
+                    <div class="card-title"><i class="fas fa-plug"></i> Compatibility</div>
+                    <p class="card-content">
+                        Can be plugged into any LLM without modification.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="results">
+        <div class="container">
+            <h2 class="section-title fade-in">Experimental Results</h2>
+            <div class="card fade-in">
+                <p class="card-content">
+                    AdaReasoner was tested across six different LLMs and various reasoning tasks. Key findings include:
+                </p>
+                <div class="key-point">
+                    <strong>Improved Accuracy:</strong> Outperforms static prompting strategies on knowledge-intensive tasks.
+                </div>
+                <div class="key-point">
+                    <strong>Robustness:</strong> Maintains strong performance on out-of-distribution and few-shot scenarios.
+                </div>
+                <div class="key-point">
+                    <strong>Efficiency:</strong> Learns effective policies with limited computational resources.
+                </div>
+                
+                <h3 style="margin-top: 40px; color: var(--primary-color); text-align: center; font-family: 'Manrope', sans-serif;">🏆 Main Results (GPT-4o)</h3>
+                <div class="results-table-container">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th>Metaphor</th>
+                                <th>TruthfulQA</th>
+                                <th>MMLU (Math)</th>
+                                <th>LogiQA</th>
+                                <th>Average</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CoT</td>
+                                <td>50.40</td>
+                                <td>78.40</td>
+                                <td>76.04</td>
+                                <td>70.00</td>
+                                <td>68.71</td>
+                            </tr>
+                            <tr>
+                                <td>Think Short</td>
+                                <td>61.00</td>
+                                <td>64.81</td>
+                                <td>68.52</td>
+                                <td>70.81</td>
+                                <td>66.28</td>
+                            </tr>
+                            <tr>
+                                <td>ToT</td>
+                                <td>48.25</td>
+                                <td>74.29</td>
+                                <td>86.11</td>
+                                <td>73.90</td>
+                                <td>70.91</td>
+                            </tr>
+                            <tr>
+                                <td>Best-of-N</td>
+                                <td>52.60</td>
+                                <td>79.41</td>
+                                <td>83.41</td>
+                                <td>72.37</td>
+                                <td>71.95</td>
+                            </tr>
+                            <tr>
+                                <td>Auto-CoT</td>
+                                <td>62.33</td>
+                                <td>83.09</td>
+                                <td>72.15</td>
+                                <td>71.71</td>
+                                <td>72.32</td>
+                            </tr>
+                            <tr>
+                                <td>In-context CoT</td>
+                                <td>53.98</td>
+                                <td>77.04</td>
+                                <td>83.63</td>
+                                <td>80.04</td>
+                                <td>74.42</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>AdaReasoner</strong></td>
+                                <td class="best-value">71.56</td>
+                                <td class="best-value">81.30</td>
+                                <td class="best-value">86.49</td>
+                                <td class="best-value">82.31</td>
+                                <td class="best-value">80.42</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title fade-in">Team & Acknowledgements</h2>
+            <div class="card fade-in">
+                <div class="card-title"><i class="fas fa-users"></i> Authors</div>
+                <div class="authors-list">
+                    <span class="author equal">Xiangqi Wang<sup>1</sup></span>
+                    <span class="author equal">Yue Huang<sup>1</sup></span>
+                    <span class="author">Yanbo Wang<sup>2</sup></span>
+                    <span class="author">Xiaonan Luo<sup>1</sup></span>
+                    <span class="author">Kehan Guo<sup>1</sup></span>
+                    <span class="author">Yujun Zhou<sup>1</sup></span>
+                    <span class="author">Xiangliang Zhang<sup>1</sup></span>
+                </div>
+                
+                <p class="equal-note">* Equal Contribution</p>
+                
+                <div class="author-affiliation">
+                    <sup>1</sup> University of Notre Dame<br>
+                    <sup>2</sup> Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)
+                </div>
+                
+                <p class="corresponding-author">
+                    Corresponding Author: xzhang33@nd.edu (Xiangliang Zhang)
+                </p>
+                
+                <div class="institutions">
+                    <div class="institution">
+                        <img src="Notre_dame.jpg" alt="University of Notre Dame">
+                        <p>University of Notre Dame</p>
+                    </div>
+                    <div class="institution">
+                        <img src="mbzuai.jpg" alt="Mohamed bin Zayed University of Artificial Intelligence">
+                        <p>MBZUAI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AdaReasoner Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
