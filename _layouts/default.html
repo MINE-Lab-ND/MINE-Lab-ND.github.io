@@ -18,6 +18,34 @@
     <!-- 粒子效果脚本 -->
     <script src="{{ site.url }}{{ site.baseurl }}/js/particles.min.js"></script>
     <script src="{{ site.url }}{{ site.baseurl }}/js/particles-config.js"></script>
+    
+    <!-- 修复响应式布局的脚本 -->
+    <script>
+      $(document).ready(function() {
+        // 确保所有图片都有max-width属性
+        $('img').css('max-width', '100%');
+        
+        // 确保所有表格都有响应式样式
+        $('table').addClass('table').wrap('<div class="table-responsive"></div>');
+        
+        // 检测并修复可能导致水平滚动的元素
+        function fixOverflow() {
+          var bodyWidth = $('body').width();
+          $('*').each(function() {
+            if ($(this).width() > bodyWidth && !$(this).is('html') && !$(this).is('body')) {
+              $(this).css({
+                'max-width': '100%',
+                'box-sizing': 'border-box'
+              });
+            }
+          });
+        }
+        
+        // 页面加载和调整大小时执行
+        fixOverflow();
+        $(window).resize(fixOverflow);
+      });
+    </script>
   </body>
 
 </html>

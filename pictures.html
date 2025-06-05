@@ -26,7 +26,7 @@ permalink: /pictures/
     <div class="row">
       {% for image in site.static_files %}
         {% if image.path contains 'images/grouppic' %}
-          <div class="col-md-4 col-sm-6 mb-4">
+          <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
             <div class="gallery-item">
               <a href="{{ site.url }}{{ site.baseurl }}{{ image.path }}" data-lightbox="group-gallery" data-title="MINE Lab">
                 <img src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="MINE Lab Group Photo" class="img-responsive">
@@ -82,5 +82,22 @@ permalink: /pictures/
   
   .mb-4 {
     margin-bottom: 1.5rem;
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 767px) {
+    .gallery-item {
+      margin-bottom: 20px;
+    }
+    
+    .gallery-item img {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .gallery-item img {
+      height: 160px;
+    }
   }
 </style> 
