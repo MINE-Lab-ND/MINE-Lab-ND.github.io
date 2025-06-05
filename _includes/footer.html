@@ -1,19 +1,32 @@
-<div id="footer" class="panel" style="background-color: #f8f9fa; padding: 20px 0; border-top: 1px solid #e9ecef;">
-	<div class="panel-footer">
-	  <div class="container">
-		<div class="row">
+<div id="footer" class="panel">
+	<div class="container-fluid">
+		<div class="row footer-content">
 		  <!-- About Section -->
-		  <div class="col-sm-6" style="padding: 10px;">
-			<p>&copy; 2024 MINE Lab. Site created with <a href="https://jekyllrb.com" target="_blank" style="text-decoration: none; color: #007bff;">Jekyll</a>.</p>
+			<div class="col-sm-4">
+				<h4><i class="fas fa-info-circle"></i> About MINE Lab</h4>
+				<p>Machine Intelligence and kNowledge Engineering Lab at the University of Notre Dame, directed by Prof. Xiangliang Zhang.</p>
+				<p>&copy; 2024 MINE Lab. Site created with <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.</p>
 		  </div>
   
 		  <!-- Contact Information -->
-		  <div class="col-sm-6" style="padding: 10px;">
-			<div style="display: flex; justify-content: flex-end; align-items: center;">
-				<p style="margin: 0; font-weight: bold;">Address:</p>
-				<address style="margin: 0 0 0 10px;">354 Fitzpatrick Hall, Notre Dame, 46556, US</address>
+			<div class="col-sm-4">
+				<h4><i class="fas fa-map-marker-alt"></i> Location</h4>
+				<p><strong>Address:</strong><br>
+				354 Fitzpatrick Hall<br>
+				University of Notre Dame<br>
+				Notre Dame, IN 46556, USA</p>
 			  </div>
-			</div>
+
+			<!-- Quick Links -->
+			<div class="col-sm-4">
+				<h4><i class="fas fa-link"></i> Quick Links</h4>
+				<ul class="list-unstyled quick-links">
+					<li><a href="{{ site.url }}{{ site.baseurl }}/team"><i class="fas fa-users"></i> Our Team</a></li>
+					<li><a href="{{ site.url }}{{ site.baseurl }}/research"><i class="fas fa-flask"></i> Research Areas</a></li>
+					<li><a href="{{ site.url }}{{ site.baseurl }}/publications"><i class="fas fa-book"></i> Publications</a></li>
+					<li><a href="https://cse.nd.edu/" target="_blank"><i class="fas fa-university"></i> CSE Department</a></li>
+					<li><a href="https://www.nd.edu/" target="_blank"><i class="fas fa-graduation-cap"></i> University of Notre Dame</a></li>
+				</ul>
 		</div>
 	  </div>
 	</div>
@@ -22,3 +35,20 @@
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
+<!-- Add a smooth scroll effect -->
+<script>
+	$(document).ready(function() {
+		// Add smooth scrolling to all links
+		$("a").on('click', function(event) {
+			if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function(){
+					window.location.hash = hash;
+				});
+			}
+		});
+	});
+</script>

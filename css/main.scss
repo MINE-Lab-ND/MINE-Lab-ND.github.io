@@ -3,54 +3,121 @@
     
 @import "bootstrap";
 
-img { margin-bottom: 24px; 
-     margin-top: 17px; 
-    border-radius:2%;
+/* Variables */
+:root {
+  --primary-color: #0c2340;       /* Notre Dame dark blue */
+  --secondary-color: #ae9142;     /* Notre Dame gold */
+  --accent-color: #006847;        /* Notre Dame green */
+  --text-color: #333333;
+  --light-bg: #f8f9fa;
+  --border-color: #e9ecef;
+  --shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
 }
 
-
-
+/* Typography */
 body {
 	padding-top: 70px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 8px;
+  display: inline-block;
+  margin-top: 25px;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Images */
+img { 
+  margin-bottom: 24px; 
+  margin-top: 17px; 
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 figcaption {
     text-align: right;
     margin-top: -20px;
     margin-bottom: 20px;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #666;
 }
 
 .uniform-size {
-	width: 250px; /* 设置统一宽度 */
-	height: 250px; /* 设置统一高度 */
-	object-fit: cover; /* 确保内容适应宽高比例 */
-	border-radius: 10px; /* 可选，圆角 */
-  }
-  
-
-/* Top navigation bar */
-
-
-p.byline {
-	text-align: center;
-	font-size: 18px;
-	line-height: 36px;
-	margin-top: -24px;
-	margin-bottom: 48px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
-
-pubtit {
-	font-weight: bold;
-}
-
-firstp {
-}
-
+/* Container */
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1000px; /* or 950px */
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Navigation */
+.navbar-default {
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary-color) !important;
+  font-size: 1.4rem;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: var(--text-color);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: var(--secondary-color);
+}
+
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover {
+  color: var(--secondary-color);
+  background-color: transparent;
 }
 
 /* Home, News */
@@ -60,55 +127,88 @@ firstp {
 
 .news-container {
 	margin: 20px 0;
-	padding: 10px;
-	border-left: 4px solid #613e08; /* 左侧颜色条，增加视觉层次 */
-	background-color: #f9f9f9; /* 背景色 */
+  padding: 15px;
+  border-left: 4px solid var(--secondary-color);
+  background-color: var(--light-bg);
+  border-radius: 0 6px 6px 0;
+  transition: var(--transition);
+}
+
+.news-container:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
   }
   
   .news-item {
-	margin-bottom: 15px;
-	padding: 10px;
-	border-bottom: 1px solid #ddd; /* 分隔线 */
+  margin-bottom: 20px;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.news-item:hover {
+  background-color: rgba(174, 145, 66, 0.05);
+}
+
+.news-item:last-child {
+  border-bottom: none;
   }
   
   .news-date {
 	display: block;
 	font-size: 0.9em;
 	color: #666;
-	margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-weight: 600;
   }
   
   .news-headline {
 	font-size: 1.2em;
 	font-weight: bold;
-	color: #333;
+  color: var(--primary-color);
   }
   
   .news-headline a {
-	text-decoration: none;
-	color: #0092cc; /* 链接颜色 */
+  color: var(--accent-color);
   }
   
   .news-headline a:hover {
+  color: var(--secondary-color);
 	text-decoration: underline;
   }
   
-
-#homeidtmp h1 {
-	text-align: center;
-}
-
-#newsid img {
-	margin-top: 6px;
-	margin-bottom: 6px;
-}
-
 /* Team & Publications */
-#gridid img { margin: 16px 22px 6px 0; border-radius:10%; box-shadow: 2px 2px 5px #888888 }
-#homeid img { margin: 0 0 0 0; border-radius:5%; box-shadow: 0px 0px 0px #888888 }
-#picid img { margin: 6px 3px 60px 6px; border-radius:1%; box-shadow: 2px 2px 5px #888888 }
-#gridid .row { margin-bottom: 24px; }
+#gridid img { 
+  margin: 16px 22px 6px 0; 
+  border-radius: 10%; 
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
 
+#gridid img:hover {
+  transform: scale(1.03);
+}
+
+#homeid img { 
+  margin: 0; 
+  border-radius: 6px; 
+  box-shadow: none;
+}
+
+#picid img { 
+  margin: 6px 3px 20px 6px; 
+  border-radius: 6px; 
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+#picid img:hover {
+  transform: scale(1.02);
+}
+
+#gridid .row { 
+  margin-bottom: 30px; 
+}
 
 /* Grid overrides */
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-5, .col-sm-6,
@@ -117,38 +217,1077 @@ firstp {
 	padding-right: 16px;
 }
 
-/* Grid overrides */
 .col-sm-4 {
 	padding-left: 26px;
 	padding-right: 26px;
 }
 
-
-/* Carusel */
-
+/* Carousel */
 .carousel {
-    border-radius: 3px 3px 3px 3px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
+  border-radius: 6px;
+  margin: 30px auto;
+  overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
-img {
-	display: block;
-	max-width: 100%;
+.carousel-inner {
+  border-radius: 6px;
+}
+
+.carousel-caption {
+  background: rgba(12, 35, 64, 0.7);
+  border-radius: 6px;
+  padding: 15px;
+}
+
+/* Publication styling */
+pubtit {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Footer styling */
+#footer {
+  background-color: var(--primary-color) !important;
+  color: white;
+  padding: 40px 0 30px;
+  margin-top: 50px;
+}
+
+#footer a {
+  color: var(--secondary-color);
+}
+
+#footer a:hover {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
-  img[alt=""] {
-	display: none; /* Hides empty or broken images */
+  h1 {
+    font-size: 2rem;
   }
   
-  img:not([src]) {
-	display: none; /* Hides images with missing or invalid src */
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Team Page Styling */
+.team-hero {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(to right, rgba(12, 35, 64, 0.9), rgba(12, 35, 64, 0.7)), url('../images/notre_dame.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.team-hero .container {
+  position: relative;
+  z-index: 10;
+}
+
+.team-logo {
+  max-width: 350px;
+  margin-bottom: 30px;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.team-hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.team-hero .lead {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.section-title {
+  border-bottom: 3px solid var(--secondary-color);
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.pi-section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+.pi-image-container {
+  margin-bottom: 20px;
+}
+
+.pi-image-container img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.pi-image-container img:hover {
+  transform: scale(1.05);
+}
+
+.pi-title {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.pi-bio {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.join-us-banner {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 30px 0;
+  margin: 40px 0;
+}
+
+.join-us-banner h3 {
+  color: white;
+  border-bottom: none;
+  margin-bottom: 15px;
+}
+
+.join-us-banner a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.team-section {
+  padding: 40px 0;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  transition: var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-card-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.team-card-content {
+  padding: 20px;
+}
+
+.team-title {
+  color: var(--accent-color);
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.team-education {
+  margin-top: 15px;
+}
+
+.team-education p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.alumni-section {
+  background-color: #f9f9f9;
+}
+
+.alumni-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+    margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.alumni-card:hover {
+  transform: translateY(-3px);
+}
+
+.pet-card {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  transition: var(--transition);
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+}
+
+.pet-image {
+  flex: 0 0 120px;
+}
+
+.pet-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0;
+}
+
+.pet-info {
+  padding: 15px;
+  flex: 1;
+}
+
+.visitor-list {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.visitor-name {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: var(--transition);
   }
   
-  .alumn img {
-	border: none; /* Removes any default image border or frame */
+.visitor-name:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.visitors-section {
+  background-color: #f9f9f9;
+}
+
+/* Media queries for team page */
+@media (max-width: 768px) {
+  .pi-image-container img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .pet-card {
+    flex-direction: column;
+  }
+  
+  .pet-image {
+    flex: 0 0 auto;
+  }
+  
+  .pet-image img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Home Page Styling */
+.home-jumbotron {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.hero-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  position: relative;
+  overflow: visible;
+}
+
+.hero-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(174, 145, 66, 0.05) 0%, rgba(12, 35, 64, 0.05) 100%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  margin-bottom: 25px;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-content .lead {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.logo-container {
+  padding: 20px;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.logo-container img {
+  max-width: 100%;
+  max-height: 300px;
+  transition: var(--transition);
+}
+
+.logo-container:hover img {
+  transform: scale(1.05);
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  }
+  
+.cta-buttons .btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: darken(#0c2340, 10%);
+  transform: translateY(-3px);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.campus-banner {
+  width: 100%;
+  overflow: hidden;
+  height: 250px;
+}
+
+.campus-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 	margin: 0;
-	padding: 0;
+  transform: scale(1.02);
+  transition: transform 10s ease;
+}
+
+.campus-banner:hover img {
+  transform: scale(1.1);
+}
+
+.section-title.text-center {
+  display: block;
+  text-align: center;
+  border-bottom: none;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.section-title.text-center:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: 15px auto;
+}
+
+.research-focus-section {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.research-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.research-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.research-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+}
+
+.research-card h3 {
+  margin-bottom: 15px;
+  border-bottom: none;
+  display: block;
+}
+
+.latest-news-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+/* Publications Page Styling */
+.publications-hero {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(to right, rgba(12, 35, 64, 0.9), rgba(12, 35, 64, 0.7)), url('../images/notre_dame.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.publications-hero .container {
+  position: relative;
+  z-index: 10;
+}
+
+.publications-logo {
+  max-width: 350px;
+  margin-bottom: 30px;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.publications-hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.publications-hero .lead {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.publications-buttons {
+  margin-top: 20px;
+}
+
+.publications-buttons .btn {
+  margin: 0 10px;
+  padding: 8px 20px;
+  border-color: white;
+  color: white;
+}
+
+.publications-buttons .btn:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.publication-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-description {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.publication-highlights {
+  margin-bottom: 50px;
+}
+
+.publication-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.publication-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.publication-image {
+  text-align: center;
+}
+
+.publication-image img {
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.publication-title {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: none;
+  font-size: 1.4rem;
+}
+
+.publication-authors {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.publication-description {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.publication-links {
+  display: flex;
+  align-items: center;
+}
+
+.publication-news {
+  margin-left: 15px;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.all-publications {
+  margin-top: 30px;
+}
+
+.publication-item {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.publication-item:hover {
+  background-color: var(--light-bg);
+}
+
+.publication-item h3 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  border-bottom: none;
+}
+
+.publication-item .authors {
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.publication-link {
+  display: inline-block;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.publication-link:hover {
+  color: var(--secondary-color);
+}
+
+/* Media queries for publications page */
+@media (max-width: 768px) {
+  .publication-card .row {
+    display: flex;
+    flex-direction: column;
   }
+  
+  .publication-image {
+    margin-bottom: 20px;
+  }
+  
+  .publications-hero h1 {
+    font-size: 2.5rem;
+  }
+  }
+
+/* Research Page Styling */
+.research-hero {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(to right, rgba(12, 35, 64, 0.9), rgba(12, 35, 64, 0.7)), url('../images/notre_dame.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.research-hero .container {
+  position: relative;
+  z-index: 10;
+}
+
+.research-logo {
+  max-width: 350px;
+  margin-bottom: 30px;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.research-hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.research-hero .lead {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.research-container {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+
+.research-intro {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 40px;
+  border-left: 5px solid var(--secondary-color);
+  padding: 20px;
+  background-color: var(--light-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.research-area {
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.research-area:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.research-icon {
+  color: var(--secondary-color);
+  padding: 30px;
+}
+
+.research-area h2 {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+}
+
+.research-area p {
+  line-height: 1.7;
+  font-size: 1.8rem;
+}
+
+.research-area p strong {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.research-area p:last-child {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(174, 145, 66, 0.05);
+  border-left: 3px solid var(--secondary-color);
+  border-radius: 4px;
+}
+
+.research-area a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 1.8rem;
+}
+
+.research-area a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.sponsors-image {
+  max-width: 100%;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+/* Media queries for research page */
+@media (max-width: 768px) {
+  .research-area .row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .research-icon {
+    margin-bottom: 20px;
+  }
+  
+  .research-hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Vacancies Page Styling */
+.vacancies-hero {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(to right, rgba(12, 35, 64, 0.9), rgba(12, 35, 64, 0.7)), url('../images/notre_dame.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.vacancies-hero .container {
+  position: relative;
+  z-index: 10;
+}
+
+.vacancies-logo {
+  max-width: 350px;
+  margin-bottom: 30px;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.vacancies-hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.vacancies-hero .lead {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.vacancy-container {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+}
+
+.vacancy-intro {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.vacancy-intro .lead {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.vacancy {
+  margin-bottom: 50px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.vacancy:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vacancy h2 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.vacancy-content {
+  padding: 10px 15px;
+}
+
+.vacancy-content ul {
+  margin-bottom: 25px;
+}
+
+.vacancy-content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.requirements, .application-process {
+  margin-top: 25px;
+}
+
+.requirements h3, .application-process h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-bottom: none;
+}
+
+.why-join-us {
+  margin: 60px 0;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  height: 100%;
+  transition: var(--transition);
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  border-bottom: none;
+}
+
+.contact-section {
+  margin-top: 60px;
+  padding: 40px 20px;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+}
+
+.contact-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.contact-section a {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Pictures Page Styling */
+.pictures-hero {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(to right, rgba(12, 35, 64, 0.9), rgba(12, 35, 64, 0.7)), url('../images/notre_dame.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.pictures-hero .container {
+  position: relative;
+  z-index: 10;
+}
+
+.pictures-logo {
+  max-width: 350px;
+  margin-bottom: 30px;
+  border-radius: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.pictures-hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.pictures-hero .lead {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.picture-container {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.gallery-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.gallery-section {
+  margin-bottom: 60px;
+}
+
+.gallery-item {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+}
+
+.gallery-caption {
+  background-color: white;
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
+}
+
+.gallery-caption p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.contribute-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+}
+
+.contribute-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  border-bottom: none;
+}
+
+/* Lightbox customization */
+.lb-data .lb-details {
+  color: white;
+}
+
+.lb-data .lb-caption {
+  font-weight: 600;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.why-notre-dame {
+  margin: 60px 0;
+  background-color: var(--light-bg);
+  padding: 40px 0;
+  border-radius: 8px;
+}
+
+.why-notre-dame .lead {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.why-notre-dame .benefit-card {
+  margin-bottom: 30px;
+  height: 100%;
+}

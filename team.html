@@ -1,0 +1,162 @@
+---
+layout: default
+title: "MINE Lab - Team"
+excerpt: "MINE Lab: Team members"
+permalink: /team/
+---
+
+<!-- Hero Section -->
+<div class="team-hero">
+  <div id="particles-js"></div>
+  <div class="container text-center">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab" class="team-logo">
+    <h1>Our Team</h1>
+    <p class="lead">Meet the researchers, scientists, and students behind MINE Lab's innovations</p>
+  </div>
+</div>
+
+<!-- Principal Investigator Section -->
+<div class="pi-section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-star"></i> Principal Investigator</h2>
+    
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <div class="pi-image-container">
+          <img src="{{ site.url }}{{ site.baseurl }}/images/xzhang.jpg" alt="Dr. Xiangliang Zhang" class="img-circle">
+        </div>
+        <h3>Xiangliang Zhang</h3>
+        <p class="pi-title">Leonard C. Bettex Collegiate Professor</p>
+        <p>Department of Computer Science and Engineering</p>
+      </div>
+      
+      <div class="col-md-8">
+        <div class="pi-bio">
+          <p>Dr. Zhang is a Leonard C. Bettex Collegiate Professor of Computer Science at University of Notre Dame, where she is leading a Machine Intelligence and kNowledge Engineering (MINE) group.</p>
+          
+          <p>Her research broadly addresses ways that enable ​computer machines to​ learn by the use of diverse types of data. Specifically, she is interested in designing machine learning algorithms for learning from complex and large-scale streaming data and graph data, with applications to recommendation systems, knowledge discovery, and natural language understanding. Her recent research notably advances the application of AI in scientific disciplines such as Chemistry, Biology and Physics. More information can be found in the publications grouped by research problems, or the full list of over 250 peer-reviewed papers.</p>
+          
+          <p>She was invited to deliver an Early Career Spotlight talk at IJCAI-ECAI 2018. In 2009, she was awarded the European Research Consortium for Informatics and Mathematics (ERCIM) Alain Bensoussan Fellowship. She regularly serve on the Program Committee for premier conferences like SIGKDD (Area Chair, Senior PC), AAAI (Area Chair, Senior PC), IJCAI (Area Chair, Senior PC), etc. She also serves as Editor-in-Chief of ACM SIGKDD Explorations, associated editor for IEEE Transactions on Dependable and Secure Computing (TDSC) and Information Sciences.</p>
+
+          <p>Prior to joining the University of Notre Dame, she was an Associate Professor in Computer Science at KAUST, Saudi Arabia. She completed her Ph.D. degree in computer science from INRIA-University Paris-Sud, France, in July 2010. She received her master and bachelor degrees from Xi'an Jiaotong University, China.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="join-us-banner">
+  <div class="container text-center">
+    <h3>We invite open research collaborations!</h3>
+    <p>Check out our <a href="{{ site.url }}{{ site.baseurl }}/vacancies">openings</a> for opportunities to join our team.</p>
+  </div>
+</div>
+
+<!-- PhD Students Section -->
+<div class="team-section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-user-graduate"></i> PhD Students</h2>
+    
+    <div class="row">
+    {% assign number_printed = 0 %}
+    {% for member in site.data.students %}
+
+    <div class="col-md-6 col-lg-4">
+      <div class="team-card">
+        <div class="team-card-image">
+          <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" class="uniform-size">
+        </div>
+        <div class="team-card-content">
+          <h4>{{ member.name }}</h4>
+          <p class="team-title">{{ member.info }}</p>
+          
+          <div class="team-education">
+            {% if member.number_educ >= 1 %}
+            <p><i class="fas fa-graduation-cap"></i> {{ member.education1 }}</p>
+            {% endif %}
+            
+            {% if member.number_educ >= 2 %}
+            <p><i class="fas fa-graduation-cap"></i> {{ member.education2 }}</p>
+            {% endif %}
+            
+            {% if member.number_educ >= 3 %}
+            <p><i class="fas fa-graduation-cap"></i> {{ member.education3 }}</p>
+            {% endif %}
+            
+            {% if member.number_educ >= 4 %}
+            <p><i class="fas fa-graduation-cap"></i> {{ member.education4 }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% assign number_printed = number_printed | plus: 1 %}
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Alumni Section -->
+<div class="team-section alumni-section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-award"></i> Alumni</h2>
+    
+    <div class="row">
+    {% for member in site.data.alumni_members %}
+      <div class="col-md-6">
+        <div class="alumni-card">
+          <h4>{{ member.name }}</h4>
+          <p>{{ member.info }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Pets Section -->
+<div class="team-section pets-section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-paw"></i> Pets Scholars</h2>
+    
+    <div class="row">
+    {% for member in site.data.alumni_pets %}
+      <div class="col-md-6">
+        <div class="pet-card">
+          <div class="pet-image">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" class="uniform-size">
+          </div>
+          <div class="pet-info">
+            <h4>{{ member.name }}</h4>
+            <p>{{ member.info }}</p>
+            
+            <div class="pet-education">
+              {% if member.number_educ >= 1 %}
+              <p>{{ member.education1 }}</p>
+              {% endif %}
+              
+              {% if member.number_educ >= 2 %}
+              <p>{{ member.education2 }}</p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Former Visitors Section -->
+<div class="team-section visitors-section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-handshake"></i> Former Visitors, BSc/MSc Students</h2>
+    
+    <div class="visitor-list">
+      {% for member in site.data.alumni_msc %}
+        <span class="visitor-name">{{ member.name }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</div> 

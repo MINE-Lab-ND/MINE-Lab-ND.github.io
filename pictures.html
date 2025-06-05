@@ -1,0 +1,86 @@
+---
+layout: default
+title: "MINE Lab - Pictures"
+excerpt: "Photos from the MINE Lab"
+permalink: /pictures/
+---
+
+<div class="pictures-hero">
+  <div id="particles-js"></div>
+  <div class="container text-center">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab" class="pictures-logo">
+    <h1>Lab Gallery</h1>
+    <p class="lead">Visual moments from our research journey</p>
+  </div>
+</div>
+
+<div class="container picture-container">
+  <div class="row">
+    <div class="col-md-12">
+      <p class="gallery-intro">Here is a collection of photos from our lab activities, conferences, and research events.</p>
+    </div>
+  </div>
+
+  <!-- Group Photos Gallery -->
+  <div class="gallery-section">
+    <div class="row">
+      {% for image in site.static_files %}
+        {% if image.path contains 'images/grouppic' %}
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="gallery-item">
+              <a href="{{ site.url }}{{ site.baseurl }}{{ image.path }}" data-lightbox="group-gallery" data-title="MINE Lab">
+                <img src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="MINE Lab Group Photo" class="img-responsive">
+              </a>
+              <div class="gallery-caption">
+                
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+
+</div>
+
+<!-- Lightbox JS for image gallery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+<style>
+  .gallery-item {
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .gallery-caption {
+    padding: 10px;
+    background: #f8f9fa;
+    text-align: center;
+  }
+  
+  .gallery-caption p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+</style> 

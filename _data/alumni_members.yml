@@ -1,59 +1,59 @@
-- name: "[Zhenwen Liang](https://zhenwen-nlp.github.io/)"
-  info: "Research Scientist at [Tencent AI Lab, Seattle](https://ai.tencent.com/ailab/en/index)"
+- name: "<a href='https://zhenwen-nlp.github.io/'>Zhenwen Liang</a>"
+  info: "Research Scientist at <a href='https://ai.tencent.com/ailab/en/index'>Tencent AI Lab, Seattle</a>"
 
-- name: "[Ziyi Kou](https://ziyikou.me/)"
-  info: "Research Scientist at [Meta, USA](https://about.meta.com/)"
+- name: "<a href='https://ziyikou.me/'>Ziyi Kou</a>"
+  info: "Research Scientist at <a href='https://about.meta.com/'>Meta, USA</a>"
 
-- name: "[Xiuying Chen](https://iriscxy.github.io/)"
-  info: "Assistant Professor at [MBZUAI, UAE](https://mbzuai.ac.ae/research/department/natural-language-processing-department/)"
+- name: "<a href='https://iriscxy.github.io/'>Xiuying Chen</a>"
+  info: "Assistant Professor at <a href='https://mbzuai.ac.ae/research/department/natural-language-processing-department/'>MBZUAI, UAE</a>"
 
-- name: "[Hongyan Bao](https://scholar.google.com/citations?user=wn3-oawAAAAJ&hl=en)"
-  info: "AI Scientist at [AStar, Singapore](https://www.a-star.edu.sg/)"
+- name: "<a href='https://scholar.google.com/citations?user=wn3-oawAAAAJ&hl=en'>Hongyan Bao</a>"
+  info: "AI Scientist at <a href='https://www.a-star.edu.sg/'>AStar, Singapore</a>"
 
-- name: "[Qiang Yang](https://qiangyangcs.github.io/)"
-  info: "Postdoc Researcher at [University of Florida, USA]( https://rayin-saber.github.io/yinrui.github.io/)"
+- name: "<a href='https://qiangyangcs.github.io/'>Qiang Yang</a>"
+  info: "Postdoc Researcher at <a href='https://rayin-saber.github.io/yinrui.github.io/'>University of Florida, USA</a>"
 
-- name: "[Chaosheng Ma](https://scholar.google.com/citations?user=RXw6pxoAAAAJ&hl=en)"
-  info: "Assistant Professor at [Lanzhou University, China](https://en.lzu.edu.cn/)"
+- name: "<a href='https://scholar.google.com/citations?user=RXw6pxoAAAAJ&hl=en'>Chaosheng Ma</a>"
+  info: "Assistant Professor at <a href='https://en.lzu.edu.cn/'>Lanzhou University, China</a>"
 
-- name: "[Shichao Pei](https://scpei.github.io/)"
-  info: "[Assistant Professor at UMass Boston, USA](https://www.umb.edu/)"
+- name: "<a href='https://scpei.github.io/'>Shichao Pei</a>"
+  info: "<a href='https://www.umb.edu/'>Assistant Professor at UMass Boston, USA</a>"
 
-- name: "[Qiannan Zhang](https://scholar.google.ca/citations?user=kfwOZ6UAAAAJ&hl=en)"
-  info: "Postdoc Researcher at [Cornell University](https://vivo.weill.cornell.edu/display/cwid-qiz4005), USA"
+- name: "<a href='https://scholar.google.ca/citations?user=kfwOZ6UAAAAJ&hl=en'>Qiannan Zhang</a>"
+  info: "Postdoc Researcher at <a href='https://vivo.weill.cornell.edu/display/cwid-qiz4005'>Cornell University</a>, USA"
 
-- name: "[Zhuo Yang](https://cemse.kaust.edu.sa/profiles/zhuo-yang)"
-  info: Researcher at Huawei, China
+- name: "<a href='https://cemse.kaust.edu.sa/profiles/zhuo-yang'>Zhuo Yang</a>"
+  info: "Researcher at Huawei, China"
 
-- name: "[Peng Han](https://scholar.google.com/citations?user=8XxCgFEAAAAJ&hl=en)"
-  info: "Full Professor at [UESTC](https://scholar.google.com/citations?view_op=view_org&hl=en&org=9610860646987207346)"
+- name: "<a href='https://scholar.google.com/citations?user=8XxCgFEAAAAJ&hl=en'>Peng Han</a>"
+  info: "Full Professor at <a href='https://scholar.google.com/citations?view_op=view_org&hl=en&org=9610860646987207346'>UESTC</a>"
 
-- name: "[Lu Yu](https://scholar.google.com.hk/citations?user=ODK41KwAAAAJ&hl=en)"
-  info: Senior Algorithm Engineer at Alibaba, China
+- name: "<a href='https://scholar.google.com.hk/citations?user=ODK41KwAAAAJ&hl=en'>Lu Yu</a>"
+  info: "Senior Algorithm Engineer at Alibaba, China"
 
-- name: "[Uchenna Akujuobi](https://scholar.google.com/citations?user=a8Af3L4AAAAJ&hl=en)"
-  info: Research Scientist at Sony AI, Japan
+- name: "<a href='https://scholar.google.com/citations?user=a8Af3L4AAAAJ&hl=en'>Uchenna Akujuobi</a>"
+  info: "Research Scientist at Sony AI, Japan"
 
-- name: "[Basmah Altaf](https://scholar.google.com/citations?user=HcXo0roAAAAJ&hl=en)"
-  info: ML Researcher and Practitioner at Huawei, Montreal, Canada
+- name: "<a href='https://scholar.google.com/citations?user=HcXo0roAAAAJ&hl=en'>Basmah Altaf</a>"
+  info: "ML Researcher and Practitioner at Huawei, Montreal, Canada"
 
-- name: "[Ibrahim Alabdulmohsin](https://ibomohsin.github.io/)"
-  info: "Research Scientist at [Google DeepMind, Zurich, Switzerland](https://research.google/)"
+- name: "<a href='https://ibomohsin.github.io/'>Ibrahim Alabdulmohsin</a>"
+  info: "Research Scientist at <a href='https://research.google/'>Google DeepMind, Zurich, Switzerland</a>"
 
-- name: "[Basma Al-Harbi](https://cs.kaust.edu.sa/)"
-  info: Assistant Professor at Jeddah University, Saudi Arabia
+- name: "<a href='https://cs.kaust.edu.sa/'>Basma Al-Harbi</a>"
+  info: "Assistant Professor at Jeddah University, Saudi Arabia"
 
-- name: "[Abdulhakim Qahtan](https://www.uu.nl/staff/AAAQahtan)"
-  info: "Assistant Professor at [Utrecht University, Netherlands](https://www.uu.nl/en)"
+- name: "<a href='https://www.uu.nl/staff/AAAQahtan'>Abdulhakim Qahtan</a>"
+  info: "Assistant Professor at <a href='https://www.uu.nl/en'>Utrecht University, Netherlands</a>"
 
-- name: "[Zhenwei Tang](https://lilv98.github.io/)"
-  info: "PhD Student at [University of Toronto, Canada](https://csslab.cs.toronto.edu/)"
+- name: "<a href='https://lilv98.github.io/'>Zhenwei Tang</a>"
+  info: "PhD Student at <a href='https://csslab.cs.toronto.edu/'>University of Toronto, Canada</a>"
 
-- name: "[Xiaodong Wu](https://tristan199714.github.io/)"
-  info: "PhD Student at [Queen’s University, Canada](https://www.queensu.ca/)"
+- name: "<a href='https://tristan199714.github.io/'>Xiaodong Wu</a>"
+  info: "PhD Student at <a href='https://www.queensu.ca/'>Queen's University, Canada</a>"
 
-- name: "[Reem Alghamdi](https://scholar.google.com/citations?user=TfCl9P8AAAAJ&hl=en)"
-  info: "PhD Student at [King Abdullah University of Science and Technology](https://www.kaust.edu.sa/en/)"
+- name: "<a href='https://scholar.google.com/citations?user=TfCl9P8AAAAJ&hl=en'>Reem Alghamdi</a>"
+  info: "PhD Student at <a href='https://www.kaust.edu.sa/en/'>King Abdullah University of Science and Technology</a>"
 
 
 
