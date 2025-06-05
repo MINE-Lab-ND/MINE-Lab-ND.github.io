@@ -2,6 +2,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 防止缓存 -->
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   
@@ -11,10 +16,11 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url}}">
-  <link rel="stylesheet" href="{{ "/css/responsive.css" | prepend: site.baseurl | prepend: site.url}}">
-  <link rel="stylesheet" href="{{ "/css/bootstrap-overrides.css" | prepend: site.baseurl | prepend: site.url}}">
+  <!-- Stylesheets with cache-busting timestamp -->
+  {% capture cache_bust %}?v={{ site.time | date: '%Y%m%d%H%M%S' }}{% endcapture %}
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url}}{{ cache_bust }}">
+  <link rel="stylesheet" href="{{ "/css/responsive.css" | prepend: site.baseurl | prepend: site.url}}{{ cache_bust }}">
+  <link rel="stylesheet" href="{{ "/css/bootstrap-overrides.css" | prepend: site.baseurl | prepend: site.url}}{{ cache_bust }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -23,6 +29,9 @@
   <!-- Bootstrap JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
+  <!-- 缓存清除脚本 -->
+  <script src="{{ site.url }}{{ site.baseurl }}/js/clear-cache.js{{ cache_bust }}"></script>
+  
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="{{ site.url }}{{ site.baseurl }}/images/mine_icon.jpg">
 
@@ -30,4 +39,35 @@
 {% include analytics.html %}
 {% endif %}
 
+<!-- 清除缓存的脚本 -->
+<script>
+  // 强制清除缓存
+  $(document).ready(function() {
+    // 清除缓存的函数
+    function clearCache() {
+      // 清除localStorage
+      if (window.localStorage) {
+        localStorage.clear();
+      }
+      
+      // 清除sessionStorage
+      if (window.sessionStorage) {
+        sessionStorage.clear();
+      }
+      
+      console.log("Cache cleared at " + new Date().toLocaleString());
+    }
+    
+    // 执行清除缓存
+    clearCache();
+    
+    // 强制重新加载所有图片
+    $('img').each(function() {
+      var src = $(this).attr('src');
+      if (src) {
+        $(this).attr('src', src + '?v=' + new Date().getTime());
+      }
+    });
+  });
+</script>
 </head>
