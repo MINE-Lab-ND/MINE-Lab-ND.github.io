@@ -1,3 +1,73 @@
+- title: "Proto-Yield: An Uncertainty-Aware Prototype Network for Yield Prediction in Real-world Chemical Reactions"
+  image: 
+  description: ""
+  authors: Kehan Guo, Zhen Liu, Zhichun Guo, Bozhao Nan, Olexandr Isayev, Nitesh Chawla, Olaf Wiest, Xiangliang Zhang
+  link:
+    url: 
+    display: CIKM 2025 (full paper)
+  highlight: 0
+  news1:
+
+- title: "Towards Few-shot Chemical Reaction Outcome Prediction"
+  image: 
+  description: ""
+  authors: Yili Shen, Yijun Tian, Cheng-Wei Ju, Olaf Wiest, Xiangliang Zhang
+  link:
+    url: 
+    display: CIKM 2025 (full paper)
+  highlight: 0
+  news1:
+
+- title: "Jailbreaking LLMs via Misalignment on Out-of-Distribution Inputs"
+  image: 
+  description: ""
+  authors: Yue Huang, Jingyu Tang, Dongping Chen, Bingda Tang, Yao Wan, Lichao Sun, Philip S. Yu, Xiangliang Zhang
+  link:
+    url: 
+    display: CIKM 2025 (short paper)
+  highlight: 0
+  news1:
+
+- title: "Think it Image by Image: Multi-Image Moral Reasoning of Large Vision-Language Models"
+  image: 
+  description: ""
+  authors: Chujie Gao, Yue Huang, Xiangqi Wang, Siyuan Wu, Nitesh Chawla, Xiangliang Zhang
+  link:
+    url: 
+    display: CIKM 2025 (short paper)
+  highlight: 0
+  news1:
+
+- title: "Fair Online Influence Maximization"
+  image: 
+  description: ""
+  authors: Xiangqi Wang, Shaokun Zhang, Jose Efraim Aguilar Escamilla, Qingyun Wu, Xiangliang Zhang, Jian Kang, Huazheng Wang
+  link:
+    url: 
+    display: TMLR 2025
+  highlight: 0
+  news1:
+
+- title: "Exposing and Patching the Flaws of Large Language Models in Social Character Simulation"
+  image: 
+  description: ""
+  authors: Yue Huang, Zhengqing Yuan, Yujun Zhou, Kehan Guo, Xiangqi Wang, Haomin Zhuang, Weixiang Sun, Lichao Sun, Jindong Wang, Yanfang Ye, Xiangliang Zhang
+  link:
+    url: 
+    display: COLM 2025
+  highlight: 0
+  news1:
+
+- title: "TRUSTEVAL: A Dynamic Evaluation Toolkit on Trustworthiness of Generative Foundation Models"
+  image: 
+  description: ""
+  authors: Yanbo Wang, Jiayi Ye, Siyuan Wu, Chujie Gao, Yue Huang, Xiuying Chen, Yue Zhao, Xiangliang Zhang
+  link:
+    url: 
+    display: NAACL 2025 Demo
+  highlight: 0
+  news1:
+
 - title: "CLIPErase: Efficient Unlearning of Visual-Textual Associations in CLIP"
   image: 
   description: ""
