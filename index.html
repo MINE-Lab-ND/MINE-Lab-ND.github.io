@@ -1,92 +1,65 @@
 ---
 layout: default
 title: "MINE Lab - Home"
-excerpt: "MINE Lab at University of Notre Dame &rarr; ND."
+excerpt: "MINE Lab at University of Notre Dame - Machine Intelligence and kNowledge Engineering"
 permalink: /
 ---
 
-<div id="home" class="col-sm-12">
-  <div class="jumbotron home-jumbotron">
-    <div class="container">
-      <div class="hero-section">
-        <div id="particles-js"></div>
-        <div class="hero-content">
-          <div class="row" style="padding: 10px 35px;">
-            <div class="col-md-9">
-              <h1>Machine Intelligence and kNowledge Engineering Lab</h1>
-              <p class="lead">Advancing AI through innovative research at the University of Notre Dame</p>
-              
-              <p>Welcome to the MINE lab, directed by <b>Prof. Xiangliang Zhang</b> in the Department of Computer Science and Engineering at the University of Notre Dame.</p>
-              
-              <p>In our lab, "MINE" signifies more than just its acronym. It represents the ownership of innovation, the discovery of hidden insights, and the pursuit of untapped potential—much like mining precious resources. Our mission is to enable computer machines to learn through experience and data, fostering breakthroughs in Artificial Intelligence that power knowledge advancement across diverse fields. We see ourselves as data "miners," uncovering the treasure troves of knowledge buried in information. At the MINE lab, we cultivate a spirit of curiosity and exploration, where ideas are not just developed—they are owned and celebrated as "mine." If you are a motivated Ph.D. candidate ready to claim your place in shaping the future of AI, we welcome you to join the MINE lab at Notre Dame!</p>
-              
-              <div class="cta-buttons">
-                <a href="{{ site.url }}{{ site.baseurl }}/research" class="btn btn-primary"><i class="fas fa-flask"></i> Explore Our Research</a>
-                <a href="{{ site.url }}{{ site.baseurl }}/team" class="btn btn-outline-primary"><i class="fas fa-users"></i> Meet Our Team</a>
-              </div>
-            </div>
+<div class="col-sm-12">
+  <div style="width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+    
+    <!-- Main Header -->
+    <div style="text-align: center; padding: 30px 0 20px 0;">
+      <h1 style="font-size: 42px; font-weight: 300; color: #0c2340; margin-bottom: 8px; line-height: 1.1;">
+        Machine Intelligence and kNowledge Engineering Lab
+      </h1>
+      <p style="font-size: 24px; color: #0c2340; margin-bottom: 0; font-weight: 400; line-height: 1.2;">
+        University of Notre Dame, Department of Computer Science and Engineering
+      </p>
+    </div>
 
-            <div class="col-md-3 text-center">
-              <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab Logo" style="max-width: 100%; max-height: 250px;">
-            </div>
+    <!-- Intro + News Two-Column -->
+    <div class="row" style="padding: 20px 0; border-bottom: 1px solid #e9ecef; align-items: flex-start;">
+      <div class="col-md-6">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab Logo" style="width: 430px; max-width: none !important; height: auto; margin-top: 0; margin-bottom: 8px; box-shadow: none; border-radius: 0;">
+        <p style="font-size: 20px; color: #525252; line-height: 1.3; margin-bottom: 8px;">
+          Welcome to the MINE lab, directed by Prof. Xiangliang Zhang in the Department of Computer Science and Engineering at the University of Notre Dame.
+        </p>
+        <p style="font-size: 20px; color: #525252; line-height: 1.3; margin-bottom: 0;">
+          In our lab, "MINE" signifies more than just its acronym. It represents the ownership of innovation, the discovery of hidden insights, and the pursuit of untapped potential—much like mining precious resources. Our mission is to enable computer machines to learn through experience and data, fostering breakthroughs in Artificial Intelligence that power knowledge advancement across diverse fields. We see ourselves as data "miners," uncovering the treasure troves of knowledge buried in information. At the MINE lab, we cultivate a spirit of curiosity and exploration, where ideas are not just developed—they are owned and celebrated as "mine." If you are a motivated Ph.D. candidate ready to claim your place in shaping the future of AI, we welcome you to join the MINE lab at Notre Dame!
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h2 style="font-size: 28px; font-weight: 500; color: #0c2340; margin: 0 0 10px 0; line-height: 1.2;">News</h2>
+        {% for article in site.data.news limit:4 %}
+        <div class="news-item-simple" style="font-size: 13px !important;">
+          <div style="font-size: 16px !important; color: #666; margin-bottom: 6px; font-weight: 500; line-height: 1.2;">
+            {{ article.date }}
+          </div>
+          <div style="font-size: 13px !important; color: #333; line-height: 1.3;">
+            {{ article.headline | markdownify }}
           </div>
         </div>
-      </div>
-
-      <div class="campus-banner">
-        <img src="https://raw.githubusercontent.com/MINE-Lab-ND/MINE-Lab-ND.github.io/refs/heads/gh-pages/images/notre_dame.jpg" alt="University of Notre Dame Campus" class="img-responsive">
-      </div>
-
-      <div class="research-focus-section">
-        <div class="container">
-          <h2 class="section-title text-center"><i class="fas fa-lightbulb"></i> Our Research Focus</h2>
-          
-          <div class="row">
-            <div class="col-md-4">
-              <div class="research-card">
-                <div class="research-icon">
-                  <i class="fas fa-brain"></i>
-                </div>
-                <h3>Machine Learning</h3>
-                <p>Designing novel algorithms for learning from complex and large-scale streaming data and graph data.</p>
-              </div>
-            </div>
-            
-            <div class="col-md-4">
-              <div class="research-card">
-                <div class="research-icon">
-                  <i class="fas fa-layer-group"></i>
-                </div>
-                <h3>Knowledge Engineering</h3>
-                <p>Building systems that discover, represent, and utilize knowledge for recommendation systems and natural language understanding.</p>
-              </div>
-            </div>
-            
-            <div class="col-md-4">
-              <div class="research-card">
-                <div class="research-icon">
-                  <i class="fas fa-flask"></i>
-                </div>
-                <h3>Scientific AI</h3>
-                <p>Advancing the application of AI in scientific disciplines such as Chemistry, Biology, and Physics.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="latest-news-section">
-        <div class="container">
-          <h2 class="section-title text-center"><i class="fas fa-newspaper"></i> Latest News</h2>
-          
-          {% include news.html %}
-          
+        {% endfor %}
+        <div style="margin-top: 10px;">
+          <a href="{{ site.url }}{{ site.baseurl }}/allnews.html" style="color: #0c2340; text-decoration: none; font-weight: 500; font-size: 18px;">View all news →</a>
         </div>
       </div>
     </div>
-  </div>
-</div> 
 
-<!-- 粒子效果脚本 -->
-<script src="{{ site.url }}{{ site.baseurl }}/js/particles.min.js"></script>
-<script src="{{ site.url }}{{ site.baseurl }}/js/particles-config.js"></script> 
+    <!-- Notre Dame Campus -->
+    <div style="padding: 25px 0; text-align: center;">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/notre_dame.jpg" alt="University of Notre Dame Campus" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    </div>
+
+
+
+    <!-- Navigation Links -->
+    <div style="text-align: center; padding: 25px 0;">
+      <a href="{{ site.url }}{{ site.baseurl }}/research" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; background-color: #0c2340; color: white; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px;">Research</a>
+      <a href="{{ site.url }}{{ site.baseurl }}/team" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; border: 1px solid #0c2340; color: #0c2340; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px;">Team</a>
+      <a href="{{ site.url }}{{ site.baseurl }}/publications" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; border: 1px solid #0c2340; color: #0c2340; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px;">Publications</a>
+    </div>
+
+  </div>
+</div>

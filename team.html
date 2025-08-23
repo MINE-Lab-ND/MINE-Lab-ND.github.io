@@ -5,20 +5,14 @@ excerpt: "MINE Lab: Team members"
 permalink: /team/
 ---
 
-<!-- Hero Section -->
-<div class="team-hero">
-  <div id="particles-js"></div>
-  <div class="container text-center">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab" class="team-logo">
-    <h1>Our Team</h1>
-    <p class="lead">Meet the researchers, scientists, and students behind MINE Lab's innovations</p>
-  </div>
+<div class="container" style="padding-top: 30px;">
+  <h1 style="text-align: center; color: #0c2340; margin-bottom: 30px;">Our Team</h1>
 </div>
 
 <!-- Principal Investigator Section -->
 <div class="pi-section">
   <div class="container">
-    <h2 class="section-title"><i class="fas fa-star"></i> Principal Investigator</h2>
+    <h2 class="section-title">Principal Investigator</h2>
     
     <div class="row">
       <div class="col-sm-12 col-md-4 text-center">
@@ -26,19 +20,19 @@ permalink: /team/
           <img src="{{ site.url }}{{ site.baseurl }}/images/xzhang.jpg" alt="Dr. Xiangliang Zhang" class="img-circle">
         </div>
         <h3>Xiangliang Zhang</h3>
-        <p class="pi-title">Leonard C. Bettex Collegiate Professor</p>
+        <p>Leonard C. Bettex Collegiate Professor</p>
         <p>Department of Computer Science and Engineering</p>
       </div>
       
       <div class="col-sm-12 col-md-8">
         <div class="pi-bio">
-          <p>Dr. Zhang is a Leonard C. Bettex Collegiate Professor of Computer Science at University of Notre Dame, where she is leading a Machine Intelligence and kNowledge Engineering (MINE) group.</p>
-          
-          <p>Her research broadly addresses ways that enable ​computer machines to​ learn by the use of diverse types of data. Specifically, she is interested in designing machine learning algorithms for learning from complex and large-scale streaming data and graph data, with applications to recommendation systems, knowledge discovery, and natural language understanding. Her recent research notably advances the application of AI in scientific disciplines such as Chemistry, Biology and Physics. More information can be found in the publications grouped by research problems, or the full list of over 250 peer-reviewed papers.</p>
-          
-          <p>She was invited to deliver an Early Career Spotlight talk at IJCAI-ECAI 2018. In 2009, she was awarded the European Research Consortium for Informatics and Mathematics (ERCIM) Alain Bensoussan Fellowship. She regularly serve on the Program Committee for premier conferences like SIGKDD (Area Chair, Senior PC), AAAI (Area Chair, Senior PC), IJCAI (Area Chair, Senior PC), etc. She also serves as Editor-in-Chief of ACM SIGKDD Explorations, associated editor for IEEE Transactions on Dependable and Secure Computing (TDSC) and Information Sciences.</p>
+          <p style="font-size: 17px;">Dr. Zhang is a Leonard C. Bettex Collegiate Professor of Computer Science at University of Notre Dame, where she is leading a Machine Intelligence and kNowledge Engineering (MINE) group.
 
-          <p>Prior to joining the University of Notre Dame, she was an Associate Professor in Computer Science at KAUST, Saudi Arabia. She completed her Ph.D. degree in computer science from INRIA-University Paris-Sud, France, in July 2010. She received her master and bachelor degrees from Xi'an Jiaotong University, China.</p>
+            Her research broadly addresses ways that enable ​computer machines to​ learn by the use of diverse types of data. Specifically, she is interested in designing machine learning algorithms for learning from complex and large-scale streaming data and graph data, with applications to recommendation systems, knowledge discovery, and natural language understanding. Her recent research notably advances the application of AI in scientific disciplines such as Chemistry, Biology and Physics. More information can be found in the publications grouped by research problems, or the full list of over 270 peer-reviewed papers.
+            
+            She was invited to deliver an Early Career Spotlight talk at IJCAI-ECAI 2018. In 2009, she was awarded the European Research Consortium for Informatics and Mathematics (ERCIM) Alain Bensoussan Fellowship. She regularly serve on the Program Committee for premier conferences like SIGKDD (Area Chair, Senior PC), AAAI (Area Chair, Senior PC), IJCAI (Area Chair, Senior PC), etc. She also serves as Editor-in-Chief of ACM SIGKDD Explorations, associated editor for IEEE Transactions on Dependable and Secure Computing (TDSC) and Information Sciences. She recently serves as the PC Co-chair of KDD 2026 (research track).
+            
+            Prior to joining the University of Notre Dame, she was an Associate Professor in Computer Science at KAUST, Saudi Arabia. She completed her Ph.D. degree in computer science from INRIA-University Paris-Sud, France, in July 2010. She received her master and bachelor degrees from Xi’an Jiaotong University, China.</p>          
         </div>
       </div>
     </div>
@@ -55,38 +49,25 @@ permalink: /team/
 <!-- PhD Students Section -->
 <div class="team-section">
   <div class="container">
-    <h2 class="section-title"><i class="fas fa-user-graduate"></i> PhD Students</h2>
+    <h2 class="section-title">PhD Students</h2>
     
     <div class="row">
     {% assign number_printed = 0 %}
     {% for member in site.data.students %}
 
-    <div class="col-xs-12 col-sm-6 col-lg-4">
-      <div class="team-card">
-        <div class="team-card-image">
-          <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" class="uniform-size">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-card" style="text-align:center; padding: 20px; margin-bottom: 20px;">
+        <div class="team-card-image" style="margin-bottom: 15px;">
+          <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" style="width: 220px; height: 260px; object-fit: cover; border-radius: 0; margin: 0 auto; display: block;">
         </div>
-        <div class="team-card-content">
-          <h4>{{ member.name }}</h4>
-          <p class="team-title">{{ member.info }}</p>
-          
-          <div class="team-education">
-            {% if member.number_educ >= 1 %}
-            <p><i class="fas fa-graduation-cap"></i> {{ member.education1 }}</p>
-            {% endif %}
-            
-            {% if member.number_educ >= 2 %}
-            <p><i class="fas fa-graduation-cap"></i> {{ member.education2 }}</p>
-            {% endif %}
-            
-            {% if member.number_educ >= 3 %}
-            <p><i class="fas fa-graduation-cap"></i> {{ member.education3 }}</p>
-            {% endif %}
-            
-            {% if member.number_educ >= 4 %}
-            <p><i class="fas fa-graduation-cap"></i> {{ member.education4 }}</p>
-            {% endif %}
-          </div>
+        <div class="team-card-content" style="padding: 0;">
+          {% assign start_term = member.info | split: 'started ' | last %}
+          {% assign start_term = start_term | split: ' (' | first %}
+          {% assign website_url = member.info | split: 'href="' | last | split: '">' | first %}
+          <h4 style="margin-bottom: 10px; font-size: 1.8rem; line-height: 1.2;">
+            <a href="{{ website_url }}" target="_blank" style="color:#0c2340; text-decoration:none;">{{ member.name }}</a>
+          </h4>
+          <p style="margin:0; font-size: 1.3rem; color:#666;">{{ start_term }}</p>
         </div>
       </div>
     </div>
@@ -100,14 +81,14 @@ permalink: /team/
 <!-- Alumni Section -->
 <div class="team-section alumni-section">
   <div class="container">
-    <h2 class="section-title"><i class="fas fa-award"></i> Alumni</h2>
+    <h2 class="section-title">Alumni</h2>
     
     <div class="row">
     {% for member in site.data.alumni_members %}
-      <div class="col-xs-12 col-sm-6">
-        <div class="alumni-card">
-          <h4>{{ member.name }}</h4>
-          <p>{{ member.info }}</p>
+      <div class="col-xs-12 col-sm-4">
+        <div class="alumni-card" style="text-align: center; padding: 18px; margin-bottom: 22px; border: 1px solid #e9ecef; border-radius: 8px;">
+          <h4 style="font-size: 1.6rem; color: #0c2340; margin-bottom: 8px; line-height: 1.2;">{{ member.name }}</h4>
+          <p style="font-size: 1.2rem; color: #666; margin-bottom: 0; line-height: 1.3;">{{ member.info }}</p>
         </div>
       </div>
     {% endfor %}
@@ -118,44 +99,30 @@ permalink: /team/
 <!-- Pets Section -->
 <div class="team-section pets-section">
   <div class="container">
-    <h2 class="section-title"><i class="fas fa-paw"></i> Pets Scholars</h2>
+    <h2 class="section-title">Pets Scholars</h2>
     
-    <div class="row">
     {% for member in site.data.alumni_pets %}
-      <div class="col-xs-12 col-sm-6">
-        <div class="pet-card">
-          <div class="pet-image">
-            <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" class="uniform-size">
-          </div>
-          <div class="pet-info">
-            <h4>{{ member.name }}</h4>
-            <p>{{ member.info }}</p>
-            
-            <div class="pet-education">
-              {% if member.number_educ >= 1 %}
-              <p>{{ member.education1 }}</p>
-              {% endif %}
-              
-              {% if member.number_educ >= 2 %}
-              <p>{{ member.education2 }}</p>
-              {% endif %}
-            </div>
-          </div>
+      <div class="pet-card-row" style="display: flex; align-items: center; margin-bottom: 30px; padding: 20px; border: 1px solid #e9ecef; border-radius: 8px;">
+        <div class="pet-image" style="flex-shrink: 0; margin-right: 20px;">
+          <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%;">
+        </div>
+        <div class="pet-info" style="flex: 1;">
+          <h4 style="color: #0c2340; margin-bottom: 10px; font-size: 1.8rem; font-weight: 600;">{{ member.name }}</h4>
+          <p style="margin-bottom: 0; line-height: 1.4;">{{ member.info }}</p>
         </div>
       </div>
     {% endfor %}
-    </div>
   </div>
 </div>
 
 <!-- Former Visitors Section -->
 <div class="team-section visitors-section">
   <div class="container">
-    <h2 class="section-title"><i class="fas fa-handshake"></i> Former Visitors, BSc/MSc Students</h2>
+    <h2 class="section-title">Former Visitors, BSc/MSc Students</h2>
     
     <div class="visitor-list">
       {% for member in site.data.alumni_msc %}
-        <span class="visitor-name">{{ member.name }}</span>
+        <div class="visitor-name">{{ member.name }}</div>
       {% endfor %}
     </div>
   </div>

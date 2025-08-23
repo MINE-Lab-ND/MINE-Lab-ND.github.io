@@ -5,80 +5,24 @@ excerpt: "MINE Lab -- Publications."
 permalink: /publications/
 ---
 
-<!-- Hero Section -->
-<div class="publications-hero">
-  <div id="particles-js"></div>
-  <div class="container text-center">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab" class="publications-logo">
-    <h1>Publications</h1>
-    <p class="lead">Research contributions from our team</p>
-    <div class="publications-buttons">
-      <a href="https://scholar.google.com/citations?user=BhRJe4wAAAAJ&hl=en" class="btn btn-outline-primary" target="_blank">
-        <i class="fas fa-graduation-cap"></i> Google Scholar
-      </a>
-      <a href="https://arxiv.org/search/?query=xiangliang+zhang&searchtype=author&abstracts=show&order=-announced_date_first&size=50" class="btn btn-outline-primary" target="_blank">
-        <i class="fas fa-file-pdf"></i> arXiv
-      </a>
-    </div>
-  </div>
+<div class="container" style="padding-top: 30px;">
+  <h1 style="text-align: center; color: #0c2340; margin-bottom: 20px;">Publications</h1>
 </div>
 
-<div class="container publication-container">
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="section-title"><i class="fas fa-star"></i> Research Highlights</h2>
-      <p class="section-description">Key publications representing our major research contributions</p>
-    </div>
-  </div>
-
-  <div class="publication-highlights">
-    {% assign number_printed = 0 %}
-    {% for publi in site.data.publist %}
-      {% if publi.highlight == 1 %}
-        <div class="publication-card">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="publication-image">
-                <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/{{ publi.image }}" class="img-responsive">
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="publication-content">
-                <h3 class="publication-title">{{ publi.title }}</h3>
-                <p class="publication-authors"><i class="fas fa-users"></i> {{ publi.authors }}</p>
-                <div class="publication-description">
-                  <p>{{ publi.description }}</p>
-                </div>
-                <div class="publication-links">
-                  <a href="{{ publi.link.url }}" class="btn btn-sm btn-primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> {{ publi.link.display }}
-                  </a>
-                  {% if publi.news1 %}
-                  <span class="publication-news">{{ publi.news1 }}</span>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="section-title mt-5"><i class="fas fa-list"></i> Complete Publication List</h2>
-      <div class="all-publications">
-        {% for publi in site.data.publist %}
-          <div class="publication-item">
-            <h3>{{ publi.title }}</h3>
-            <p class="authors"><i class="fas fa-users"></i> <em>{{ publi.authors }}</em></p>
-            <a href="{{ publi.link.url }}" class="publication-link" target="_blank">
-              <i class="fas fa-external-link-alt"></i> {{ publi.link.display }}
-            </a>
-          </div>
-        {% endfor %}
+<div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+  {% assign total_count = site.data.publist.size %}
+  {% for publi in site.data.publist %}
+  <div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #e9ecef;">
+    <div style="display: flex; align-items: baseline;">
+      <span style="font-size: 20px; color: #666; margin-right: 12px; min-width: 30px;">{{ total_count | minus: forloop.index0 }}.</span>
+      <div style="flex: 1;">
+        <h3 style="font-size: 20px; color: #0c2340; margin: 0 0 3px 0; font-weight: 600; line-height: 1.2;">
+          <a href="{{ publi.link.url }}" target="_blank" style="color: #0c2340; text-decoration: none;">{{ publi.title }}</a>
+        </h3>
+        <p style="font-size: 20px; color: #666; margin: 0 0 2px 0; line-height: 1.2;">{{ publi.authors }}</p>
+        <p style="font-size: 20px; color: #ae9142; margin: 0; font-weight: 500; line-height: 1.2;">{{ publi.link.display }}</p>
       </div>
     </div>
   </div>
+  {% endfor %}
 </div> 
