@@ -9,11 +9,11 @@ permalink: /
   <div style="width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
     
     <!-- Main Header -->
-    <div style="text-align: center; padding: 30px 0 20px 0;">
-      <h1 style="font-size: 42px; font-weight: 300; color: #0c2340; margin-bottom: 8px; line-height: 1.1;">
+    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); text-align: center; padding: 40px 0 30px 0; margin: -20px -20px 0 -20px; border-radius: 0 0 15px 15px; animation: fadeInDown 0.8s ease-out;">
+      <h1 style="font-size: 42px; font-weight: 300; color: #0c2340; margin-bottom: 8px; line-height: 1.1; animation: slideInUp 1s ease-out 0.2s both;">
         Machine Intelligence and kNowledge Engineering Lab
       </h1>
-      <p style="font-size: 24px; color: #0c2340; margin-bottom: 0; font-weight: 400; line-height: 1.2;">
+      <p style="font-size: 24px; color: #0c2340; margin-bottom: 0; font-weight: 400; line-height: 1.2; animation: slideInUp 1s ease-out 0.4s both;">
         University of Notre Dame, Department of Computer Science and Engineering
       </p>
     </div>
@@ -21,15 +21,15 @@ permalink: /
     <!-- Intro + News Two-Column -->
     <div class="row" style="padding: 20px 0; border-bottom: 1px solid #e9ecef; align-items: flex-start;">
       <div class="col-md-6">
-        <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab Logo" style="width: 430px; max-width: none !important; height: auto; margin-top: 0; margin-bottom: 8px; box-shadow: none; border-radius: 0;">
-        <p style="font-size: 20px; color: #525252; line-height: 1.3; margin-bottom: 8px;">
-          Welcome to the MINE lab, directed by Prof. Xiangliang Zhang in the Department of Computer Science and Engineering at the University of Notre Dame.
+        <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab Logo" style="width: 430px; max-width: none !important; height: auto; margin-top: 0; margin-bottom: 8px; box-shadow: none; border-radius: 0; animation: fadeInLeft 1s ease-out 0.6s both;">
+        <p style="font-size: 20px; color: #525252; line-height: 1.3; margin-bottom: 8px; animation: fadeInLeft 1s ease-out 0.8s both;">
+          Welcome to the <strong>MINE lab</strong>, directed by <strong>Prof. Xiangliang Zhang</strong> in the Department of Computer Science and Engineering at the <strong>University of Notre Dame</strong>.
         </p>
-        <p style="font-size: 20px; color: #525252; line-height: 1.3; margin-bottom: 0;">
-          In our lab, "MINE" signifies more than just its acronym. It represents the ownership of innovation, the discovery of hidden insights, and the pursuit of untapped potential—much like mining precious resources. Our mission is to enable computer machines to learn through experience and data, fostering breakthroughs in Artificial Intelligence that power knowledge advancement across diverse fields. We see ourselves as data "miners," uncovering the treasure troves of knowledge buried in information. At the MINE lab, we cultivate a spirit of curiosity and exploration, where ideas are not just developed—they are owned and celebrated as "mine." If you are a motivated Ph.D. candidate ready to claim your place in shaping the future of AI, we welcome you to join the MINE lab at Notre Dame!
+        <p style="font-size: 20px; color: #525252; line-height: 1.3; margin-bottom: 0; animation: fadeInLeft 1s ease-out 1s both;">
+          In our lab, <strong>"MINE"</strong> signifies more than just its acronym. It represents the <strong>ownership of innovation</strong>, the <strong>discovery of hidden insights</strong>, and the pursuit of untapped potential—much like mining precious resources. Our mission is to enable computer machines to learn through experience and data, fostering breakthroughs in <strong>Artificial Intelligence</strong> that power knowledge advancement across diverse fields. We see ourselves as data "miners," uncovering the treasure troves of knowledge buried in information. At the MINE lab, we cultivate a spirit of curiosity and exploration, where ideas are not just developed—they are owned and celebrated as "mine." If you are a motivated <strong>Ph.D. candidate</strong> ready to claim your place in shaping the future of AI, we welcome you to join the MINE lab at Notre Dame!
         </p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" style="animation: fadeInRight 1s ease-out 0.6s both; margin-top: 30px;">
         <h2 style="font-size: 28px; font-weight: 500; color: #0c2340; margin: 0 0 10px 0; line-height: 1.2;">News</h2>
         {% for article in site.data.news limit:4 %}
         <div class="news-item-simple" style="font-size: 13px !important;">
@@ -55,10 +55,10 @@ permalink: /
 
 
     <!-- Navigation Links -->
-    <div style="text-align: center; padding: 25px 0;">
-      <a href="{{ site.url }}{{ site.baseurl }}/research" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; background-color: #0c2340; color: white; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px;">Research</a>
-      <a href="{{ site.url }}{{ site.baseurl }}/team" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; border: 1px solid #0c2340; color: #0c2340; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px;">Team</a>
-      <a href="{{ site.url }}{{ site.baseurl }}/publications" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; border: 1px solid #0c2340; color: #0c2340; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px;">Publications</a>
+    <div style="text-align: center; padding: 25px 0; animation: fadeInUp 1s ease-out 1.2s both;">
+      <a href="{{ site.url }}{{ site.baseurl }}/research" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; background-color: #0c2340; color: white; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.1)'">Research</a>
+      <a href="{{ site.url }}{{ site.baseurl }}/team" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; border: 1px solid #0c2340; color: #0c2340; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.backgroundColor='#0c2340'; this.style.color='white'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='transparent'; this.style.color='#0c2340'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.1)'">Team</a>
+      <a href="{{ site.url }}{{ site.baseurl }}/publications" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; border: 1px solid #0c2340; color: #0c2340; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.backgroundColor='#0c2340'; this.style.color='white'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='transparent'; this.style.color='#0c2340'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.1)'">Publications</a>
     </div>
 
   </div>

@@ -107,9 +107,25 @@ figcaption {
 }
 
 .navbar-brand {
-  font-weight: 700;
+  font-family: 'Merriweather', 'Georgia', serif !important;
+  font-weight: 600;
   color: var(--primary-color) !important;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  text-decoration: none !important;
+}
+
+.navbar-brand:hover {
+  color: var(--secondary-color) !important;
+  text-decoration: none !important;
+}
+
+.full-brand-name {
+  display: inline;
+}
+
+.short-brand-name {
+  display: none;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -269,11 +285,15 @@ pubtit {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .navbar-brand {
-    font-size: 1.2rem;
-    max-width: 80%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 1.3rem;
+  }
+  
+  .full-brand-name {
+    display: none;
+  }
+  
+  .short-brand-name {
+    display: inline;
   }
   
   h1 {
@@ -1316,4 +1336,70 @@ pubtit {
 .news-item-simple p {
   font-size: 13px !important;
   margin-bottom: 0 !important;
+}
+
+/* Homepage animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments for main page */
+@media (max-width: 767px) {
+  /* News section spacing on mobile */
+  .col-md-6[style*="margin-top: 30px"] {
+    margin-top: 20px !important;
+  }
+  
+  /* Footer responsive */
+  #footer .row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: center !important;
+  }
+  
+  #footer .row > div {
+    text-align: center !important;
+    margin-bottom: 8px !important;
+    width: 100% !important;
+  }
 }
