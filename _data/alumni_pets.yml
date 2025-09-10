@@ -1,27 +1,31 @@
 - name: "Bark-fesso: Oreo"
-  photo: oreo.jpg
-  info:  "Bark-fessor, Oreo, a brilliant mini-Aussie, serves as the lead investigator in the MINE Lab's Paw-tective Studies Department. His research interests include shepherding efficiency, treat economics, and zoomie dynamics under varying energy conditions. Oreo is currently working on a groundbreaking thesis titled, \"The Art of Herding Humans: A Behavioral Study in Household Management.""
-  email: Oreo@oreo.edu
+  photo: "oreo.jpg"
+  info: >-
+    Bark-fessor, Oreo, a brilliant mini-Aussie, serves as the lead investigator in the MINE Lab's Paw-tective Studies Department. His research interests include shepherding efficiency, treat economics, and zoomie dynamics under varying energy conditions. Oreo is currently working on a groundbreaking thesis titled, "The Art of Herding Humans: A Behavioral Study in Household Management."
+  email: "oreo@oreo.edu"
   number_educ: 0
   education1: ""
 
 - name: "Post-dog-toral Researcher: Donna (RIP)"
-  photo: donna_bw.jpg
-  info: "Donna, a remarkable Shih Tzu, served as the Post-dog-toral Researcher in the MINE Lab's Comfort Optimization Department. Her research interests included blanket layering strategies, lap-warming efficiency, and the physics of toy displacement during playtime. Donna worked on an innovative study titled, \"The Science of Cozy: Maximizing Comfort in Shared Living Spaces.\" She will be deeply missed and forever remembered for her contributions to comfort science and the warmth she brought to our lab family."
-  email: cat@cat.edu
+  photo: "donna_bw.jpg"
+  info: >-
+    Donna, a remarkable Shih Tzu, served as the Post-dog-toral Researcher in the MINE Lab's Comfort Optimization Department. Her research interests included blanket layering strategies, lap-warming efficiency, and the physics of toy displacement during playtime. Donna worked on an innovative study titled, "The Science of Cozy: Maximizing Comfort in Shared Living Spaces." She will be deeply missed and forever remembered for her contributions to comfort science and the warmth she brought to our lab family.
+  email: "cat@cat.edu"
   number_educ: 0
   education1: ""
 
 - name: "Purr-graduate Fellow: Fletcher"
-  photo: fletcher.jpg
-  info: "Fletcher is pursuing his Meow-ster's Degree in Cozy Spot Optimization and String Theory (literally). His academic contributions include pioneering studies in 'keyboard occupation during work hours' and 'lap-warming methodologies.' Fletcher's extracurricular interests include investigating sunbeam alignment across the room and testing the gravitational properties of objects on tables."
-  email: cat@cat.edu
+  photo: "fletcher.jpg"
+  info: >-
+    Fletcher is pursuing his Meow-ster's Degree in Cozy Spot Optimization and String Theory (literally). His academic contributions include pioneering studies in 'keyboard occupation during work hours' and 'lap-warming methodologies.' Fletcher's extracurricular interests include investigating sunbeam alignment across the room and testing the gravitational properties of objects on tables.
+  email: "cat@cat.edu"
   number_educ: 0
   education1: ""
 
 - name: "Bun-chelor's Student: Snowball"
-  photo: snowball.jpg
-  info: "Snowball is proudly working toward her Bun-chelor's Degree in Fluff Density Maximization and Veggie Acquisition Strategies. Her notable academic achievements include trailblazing research on 'Couch Cushion Excavation' and 'The Art of Begging for Treats with Maximum Adorability.' Snowball's leisure activities feature precision binkies at unexpected moments, mastering the art of disappearing into tiny nooks, and conducting extensive taste tests on various types of lettuce."
-  email: snowball@bun.edu
+  photo: "snowball.jpg"
+  info: >-
+    Snowball is proudly working toward her Bun-chelor's Degree in Fluff Density Maximization and Veggie Acquisition Strategies. Her notable academic achievements include trailblazing research on 'Couch Cushion Excavation' and 'The Art of Begging for Treats with Maximum Adorability.' Snowball's leisure activities feature precision binkies at unexpected moments, mastering the art of disappearing into tiny nooks, and conducting extensive taste tests on various types of lettuce.
+  email: "snowball@bun.edu"
   number_educ: 0
   education1: ""
