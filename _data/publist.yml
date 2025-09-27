@@ -1,3 +1,93 @@
+- title: "ChemOrch: Empowering LLMs with Chemical Intelligence via Groundbreaking Synthetic Instructions"
+  image: 
+  description: ""
+  authors: Yue Huang, Zhengzhe Jiang, Xiaonan Luo, Kehan Guo, Haomin Zhuang, Yujun Zhou, Zhengqing Yuan, Xiaoqi Sun, Jules Schleinitz, Yanbo Wang, Shuhao Zhang, Mihir Surve, Nitesh V Chawla, Olaf Wiest, Xiangliang Zhang
+  link:
+    url: 
+    display: NeurIPS 2025
+  highlight: 0
+  news1:
+
+- title: "AdaReasoner: Adaptive Reasoning Enables More Flexible Thinking"
+  image: 
+  description: ""
+  authors: Xiangqi Wang, Yue Huang, Yanbo Wang, Xiaonan Luo, Kehan Guo, Yujun Zhou, Xiangliang Zhang
+  link:
+    url: 
+    display: NeurIPS 2025
+  highlight: 0
+  news1:
+
+- title: "DyFlow: Dynamic Workflow Framework for Agentic Reasoning"
+  image: 
+  description: ""
+  authors: Yanbo Wang, Zixiang Xu, Yue Huang, Xiangqi Wang, Zirui Song, Lang Gao, Chenxi Wang, Xiangru Tang, Yue Zhao, Arman Cohan, Xiangliang Zhang, Xiuying Chen
+  link:
+    url: 
+    display: NeurIPS 2025
+  highlight: 0
+  news1:
+
+- title: "Adaptive Distraction: Probing LLM Contextual Robustness with Automated Tree Search"
+  image: 
+  description: ""
+  authors: Yanbo Wang, Zixiang Xu, Yue Huang, Chujie Gao, Siyuan Wu, Jiayi Ye, Pin-Yu Chen, Xiuying Chen, Xiangliang Zhang
+  link:
+    url: 
+    display: NeurIPS 2025
+  highlight: 0
+  news1:
+
+- title: "TraffiDent: A Dataset for Understanding the Interplay Between Traffic Dynamics and Incidents"
+  image: 
+  description: ""
+  authors: Xiaochuan Gou, Ziyue Li, Tian Lan, Junpeng Lin, zhishuai Li, Bingyu Zhao, Chen Zhang, Di Wang, Xiangliang Zhang
+  link:
+    url: 
+    display: NeurIPS 2025 Datasets and Benchmarks Track
+  highlight: 0
+  news1:
+
+- title: "BenchmarkCards: Standardized Documentation for Large Language Model Benchmarks"
+  image: 
+  description: ""
+  authors: Anna Sokol, Elizabeth M. Daly, Michael Hind, David Piorkowski, Xiangliang Zhang, Nuno Moniz, Nitesh V Chawla
+  link:
+    url: 
+    display: NeurIPS 2025 Datasets and Benchmarks Track
+  highlight: 0
+  news1:
+
+- title: "Quest2DataAgent: Automating End-to-End Scientific Data Collection"
+  image: 
+  description: ""
+  authors: Tianyu Yang, Yuhan Liu, Sobin Alosious, Ethan A. Brown, Jason Rohr, Tengfei Luo, Xiangliang Zhang
+  link:
+    url: 
+    display: EMNLP 2025 (System Demonstrations)
+  highlight: 0
+  news1:
+
+- title: "Dissecting Logical Reasoning in LLMs: A Fine-Grained Evaluation and Supervision Study"
+  image: 
+  description: ""
+  authors: Yujun Zhou, Jiayi Ye, Zipeng Ling, Yufei Han, Yue Huang, Haomin Zhuang, Zhenwen Liang, Kehan Guo, Taicheng Guo, Xiangqi Wang, Xiangliang Zhang
+  link:
+    url: 
+    display: EMNLP 2025 Findings
+  highlight: 0
+  news1:
+
+- title: "Invisible Entropy: Towards Safe and Efficient Low-Entropy LLM Watermarking"
+  image: 
+  description: ""
+  authors: Tianle Gu, Zongqi Wang, Kexin Huang, Yuanqi Yao, Xiangliang Zhang, Yujiu Yang, Xiuying Chen
+  link:
+    url: 
+    display: EMNLP 2025
+  highlight: 0
+  news1:
+
 - title: "Proto-Yield: An Uncertainty-Aware Prototype Network for Yield Prediction in Real-world Chemical Reactions"
   image: 
   description: ""
