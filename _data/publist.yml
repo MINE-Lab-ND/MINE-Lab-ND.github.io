@@ -243,8 +243,68 @@
   description: ""
   authors: Anna Sokol, Elizabeth M. Daly, Michael Hind, David Piorkowski, Xiangliang Zhang, Nuno Moniz, Nitesh V Chawla
   link:
-    url: 
+    url: https://arxiv.org/pdf/2410.12974
     display: NeurIPS 2025 Datasets and Benchmarks Track
+  highlight: 0
+  news1:
+
+- title: "Quasiparticle Interference Kernel Extraction with Variational Autoencoders via Latent Alignment"
+  image:
+  description: ""
+  authors: Yingshuai Ji, Haomin Zhuang, Matthew Toole, James McKenzie, Xiaolong Liu, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/abs/2506.05325v1
+    display: IEEE BigData 2025
+  highlight: 0
+  news1:
+
+- title: "ReactionTeam: Teaming Experts for Divergent Thinking Beyond Typical Reaction Patterns"
+  image:
+  description: ""
+  authors: Taicheng Guo, Changsheng Ma, Kehan Guo, Xiuying Chen, Bozhao Nan, Shichao Pei, Nitesh Chawla, Olaf Wiest, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/html/2310.04674v3
+    display: IEEE BigData 2025
+  highlight: 0
+  news1:
+
+- title: "Unveiling the Dynamics of Multi-Dimensional Filter Bubbles in News Recommendation"
+  image:
+  description: ""
+  authors: Manal A. Alshehri, Xiangliang Zhang
+  link:
+    url:
+    display: IEEE BigData 2025 (Short Paper)
+  highlight: 0
+  news1:
+
+- title: "New Paradigm for Evaluating Scholar Summaries: A Facet-aware Metric and a Meta-evaluation Benchmark"
+  image:
+  description: ""
+  authors: Tairan Wang, Xiuying Chen, Qingqing Zhu, Taicheng Guo, Shen Gao, Zhiyong Lu, Xin Gao, Xiangliang Zhang
+  link:
+    url: https://dl.acm.org/doi/full/10.1145/3733597
+    display: ACM Transactions on Information Systems, Vol. 43, Issue 4, 2025
+  highlight: 0
+  news1:
+
+- title: "Towards Generalized Urban Computing: Pretraining a Spatial-Temporal Model for Diverse Urban Tasks"
+  image:
+  description: ""
+  authors: Yingqian Zhang, Chao Li, Shibo He, Xiangliang Zhang, Jiming Chen
+  link:
+    url: https://ieeexplore.ieee.org/document/11014628
+    display: IEEE Transactions on Mobile Computing, Vol. 24, Issue 10, October 2025
+  highlight: 0
+  news1:
+
+- title: "Machine learning for 2D material-based devices"
+  image:
+  description: ""
+  authors: Yuan Yan, Yimu Yang, Yinchang Ma, Kadin Reed, Shengzhi Li, Shichao Pei, Zhenwen Liang, Xixiang Zhang, Yi Wan, Xiangliang Zhang, Rongyu Lin
+  link:
+    url: https://www.sciencedirect.com/science/article/pii/S0927796X25001639
+    display: Materials Science and Engineering R, Vol. 166, 2025
   highlight: 0
   news1:
 
