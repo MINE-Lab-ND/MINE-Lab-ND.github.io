@@ -1,9 +1,199 @@
+- title: "ProbeLLM: Automating Principled Diagnosis of LLM Failures"
+  image:
+  description: ""
+  authors: Yue Huang, Zhengzhe Jiang, Yuchen Ma, Yu Jiang, Xiangqi Wang, Yujun Zhou, Yuexing Hao, Kehan Guo, Pin-Yu Chen, Marzyeh Ghassemi, Stefan Feuerriegel, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/abs/2602.12966
+    display: ICML 2026
+  highlight: 1
+  news1:
+
+- title: "Capability-Oriented Training Induced Alignment Risk"
+  image:
+  description: ""
+  authors: Yujun Zhou, Yue Huang, Han Bao, Kehan Guo, Zhenwen Liang, Pin-Yu Chen, Tian Gao, Werner Geyer, Nuno Moniz, Nitesh V Chawla, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/abs/2602.12124
+    display: ICML 2026
+  highlight: 0
+  news1:
+
+- title: "Beyond Prediction: Toward Verifiable Physiological Waveform Reasoning with Foundation Models and Agentic LLMs"
+  image:
+  description: ""
+  authors: Xiaoda Wang, Ching Chang, Defu Cao, Kaiqiao Han, Fang Sun, Yue Huang, Minxiao Wang, Chang Xu, Xiao Luo, Runze Yan, Xiangliang Zhang, Xiao Hu, Yan Liu, Yizhou Sun, Wei Wang, Carl Yang
+  link:
+    url: https://www.techrxiv.org/doi/full/10.36227/techrxiv.177092226.67693184/v1
+    display: ICML 2026 Position Track
+  highlight: 0
+  news1:
+
+- title: "My Favorite Streamer is an LLM: Discovering, Bonding, and Co-Creating in AI VTuber Fandom"
+  image:
+  description: ""
+  authors: Jiayi Ye, Chaoran Chen, Yue Huang, Yanfang Ye, Toby Jia-Jun Li, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/abs/2509.10427
+    display: CHI 2026 (Honourable Mention Award)
+  highlight: 1
+  news1:
+
+- title: "MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training"
+  image:
+  description: ""
+  authors: Taicheng Guo, Hai Wang, Chaochun Liu, Mohsen Golalikhani, Xin Chen, Xiangliang Zhang, Chandan K. Reddy
+  link:
+    url: https://arxiv.org/abs/2510.12831
+    display: ACL 2026
+  highlight: 0
+  news1:
+
+- title: "A Survey of Multimodal Mathematical Reasoning: From Perception, Alignment to Reasoning"
+  image:
+  description: ""
+  authors: Tianyu Yang, Sihong Wu, Yilun Zhao, Zhenwen Liang, Lisen Dai, Chen Zhao, Minhao Cheng, Arman Cohan, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/abs/2603.08291
+    display: ACL 2026
+  highlight: 0
+  news1:
+
+- title: "Too Correct to Learn: Reinforcement Learning on Saturated Reasoning Data"
+  image:
+  description: ""
+  authors: Zhenwen Liang, Yujun Zhou, Sidi Lu, Xiangliang Zhang, Haitao Mi, Dong Yu
+  link:
+    url: https://arxiv.org/abs/2604.18493
+    display: ACL 2026
+  highlight: 0
+  news1:
+
+- title: "Guardian-as-an-Advisor: Advancing Next-Generation Guardian Models for Trustworthy LLMs"
+  image:
+  description: ""
+  authors: Yue Huang, Haomin Zhuang, Jiayi Ye, Han Bao, Yanbo Wang, Hang Hua, Siyuan Wu, Pin-Yu Chen, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/abs/2604.07655
+    display: ACL 2026 Findings
+  highlight: 0
+  news1:
+
+- title: "PolicyLLM: Towards Excellent Comprehension of Public Policy for Large Language Models"
+  image:
+  description: ""
+  authors: Han Bao, Penghao Zhang, Yue Huang, Zhengqing Yuan, Yanchi Ru, Su Rui, Yujun Zhou, Xiangqi Wang, Kehan Guo, Nitesh V Chawla, Yanfang Ye, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/abs/2604.12995
+    display: ACL 2026 Findings
+  highlight: 0
+  news1:
+
+- title: "TrustGen: A Platform of Dynamic Benchmarking on the Trustworthiness of Generative Foundation Models"
+  image:
+  description: ""
+  authors: Yue Huang, Chujie Gao, Siyuan Wu, Haoran Wang, Xiangqi Wang, Jiayi Ye, Yujun Zhou, Yanbo Wang, Jiawen Shi, Qihui Zhang, Han Bao, Zhaoyi Liu, Yuan Li, Tianrui Guan, Peiran Wang, Haomin Zhuang, Dongping Chen, Kehan Guo, Andy Zou, Bryan Hooi, Caiming Xiong, Elias Stengel-Eskin, Hongyang Zhang, Hongzhi Yin, Huan Zhang, Huaxiu Yao, Jieyu Zhang, Jaehong Yoon, Kai Shu, Ranjay Krishna, Swabha Swayamdipta, Weijia Shi, Xiang Li, Yuexing Hao, Zhihao Jia, Zhize Li, Xiuying Chen, Zhengzhong Tu, Xiyang Hu, Tianyi Zhou, Jieyu Zhao, Lichao Sun, Furong Huang, Or Cohen-Sasson, Prasanna Sattigeri, Anka Reuel, Max Lamparth, Yue Zhao, Nouha Dziri, Yu Su, Huan Sun, Heng Ji, Chaowei Xiao, Mohit Bansal, Nitesh V Chawla, Jian Pei, Jianfeng Gao, Michael Backes, Philip S. Yu, Neil Zhenqiang Gong, Pin-Yu Chen, Bo Li, Dawn Song, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/pdf/2502.14296
+    display: ICLR 2026
+  highlight: 1
+  news1:
+
+- title: "Building a Foundational Guardrail for General Agentic Systems via Synthetic Data"
+  image:
+  description: ""
+  authors: Yue Huang, Hang Hua, Yujun Zhou, Pengcheng Jing, Manish Nagireddy, Inkit Padhi, Greta Dolcetti, Zhangchen Xu, Subhajit Chaudhury, Ambrish Rawat, Liubov Nedoshivina, Pin-Yu Chen, Prasanna Sattigeri, Xiangliang Zhang
+  link:
+    url: https://openreview.net/pdf?id=M47SWYubR5
+    display: ICLR 2026
+  highlight: 1
+  news1:
+
+- title: "Preference Leakage: A Contamination Problem in LLM-as-a-Judge"
+  image:
+  description: ""
+  authors: Dawei Li, Renliang Sun, Yue Huang, Ming Zhong, Bohan Jiang, Jiawei Han, Xiangliang Zhang, Wei Wang, Huan Liu
+  link:
+    url: https://openreview.net/pdf?id=grIvSXVJ65
+    display: ICLR 2026 (Best Paper Award, ICML 2025 DIG-BUG Workshop)
+  highlight: 1
+  news1:
+
+- title: "RankLLM: Weighted Ranking of LLMs by Quantifying Question Difficulty"
+  image:
+  description: ""
+  authors: Xingjian Hu, Ziqian Zhang, Yue Huang, Kai Zhang, Ruoxi Chen, Yixin Liu, Qingsong Wen, Kaidi Xu, Xiangliang Zhang, Neil Zhenqiang Gong, Lichao Sun
+  link:
+    url: https://openreview.net/pdf?id=jnX5GJIoYt
+    display: ICLR 2026
+  highlight: 0
+  news1:
+
+- title: "TableDART: Dynamic Adaptive Multi-Modal Routing for Table Understanding"
+  image:
+  description: ""
+  authors: Xiaobo Xing, Wei Yuan, Tong Chen, Quoc Viet Hung Nguyen, Xiangliang Zhang, Hongzhi Yin
+  link:
+    url: https://openreview.net/pdf?id=4aZTiLH3fm
+    display: ICLR 2026
+  highlight: 0
+  news1:
+
+- title: "Better Datasets Start From RefineLab: Automatic Optimization for High-Quality Dataset Refinement"
+  image:
+  description: ""
+  authors: Xiaonan Luo, Yue Huang, Ping He, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/abs/2511.06530
+    display: AAAI 2026
+  highlight: 0
+  news1:
+
+- title: "RMO: Towards Better LLM Alignment via Reshaping Reward Margin Distributions"
+  image:
+  description: ""
+  authors: Yanchi Ru, Yue Huang, Xiangliang Zhang
+  link:
+    url: https://ojs.aaai.org/index.php/AAAI/article/view/40565
+    display: AAAI 2026
+  highlight: 0
+  news1:
+
+- title: "SPA: Achieving Consensus in LLM Alignment via Self-Priority Optimization"
+  image:
+  description: ""
+  authors: Yue Huang, Xiangqi Wang, Xiangliang Zhang
+  link:
+    url: https://arxiv.org/abs/2511.06222
+    display: AAAI 2026
+  highlight: 0
+  news1:
+
+- title: "Adaptive and Context-rich Generative Self-supervised Learning on Graphs"
+  image:
+  description: ""
+  authors: Yijun Tian, Chuxu Zhang, Ziyi Kou, Zheyuan Liu, Xiangliang Zhang, Nitesh V Chawla
+  link:
+    url: https://ojs.aaai.org/index.php/AAAI/article/view/39792/43753
+    display: AAAI 2026
+  highlight: 0
+  news1:
+
+- title: "Benchmarking Large Language Models on Safety Issues in Scientific Labs"
+  image:
+  description: ""
+  authors: Yujun Zhou, Jingdong Yang, Yue Huang, Kehan Guo, Zoe Emory, Bikram Ghosh, Amita Bedar, Sujay Shekar, Zhenwen Liang, Pin-Yu Chen, Tian Gao, Werner Geyer, Nuno Moniz, Nitesh V. Chawla, Xiangliang Zhang
+  link:
+    url: https://doi.org/10.1038/s42256-025-01152-1
+    display: Nature Machine Intelligence, Jan 2026
+  highlight: 1
+  news1: "Highlighted by [New Scientist](https://www.newscientist.com/article/2511098-all-major-ai-models-risk-encouraging-dangerous-science-experiments/) and [Science News](https://www.science.org/content/article/leading-ai-models-miss-dangerous-lab-risks)."
+
 - title: "ChemOrch: Empowering LLMs with Chemical Intelligence via Groundbreaking Synthetic Instructions"
   image: 
   description: ""
   authors: Yue Huang, Zhengzhe Jiang, Xiaonan Luo, Kehan Guo, Haomin Zhuang, Yujun Zhou, Zhengqing Yuan, Xiaoqi Sun, Jules Schleinitz, Yanbo Wang, Shuhao Zhang, Mihir Surve, Nitesh V Chawla, Olaf Wiest, Xiangliang Zhang
   link:
-    url: 
+    url: https://arxiv.org/abs/2509.16543
     display: NeurIPS 2025
   highlight: 0
   news1:

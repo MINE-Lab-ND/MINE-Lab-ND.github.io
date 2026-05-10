@@ -1,28 +1,51 @@
 ---
 layout: default
-title: "MINE Lab - Publications"
-excerpt: "MINE Lab -- Publications."
+title: "Publications · MINE Lab"
+excerpt: "Selected publications from the MINE Lab at the University of Notre Dame."
 permalink: /publications/
 ---
 
-<div class="container" style="padding-top: 30px;">
-  <h1 style="text-align: center; color: #0c2340; margin-bottom: 20px;">Publications</h1>
-</div>
+<div class="page">
 
-<div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
-  {% assign total_count = site.data.publist.size %}
-  {% for publi in site.data.publist %}
-  <div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #e9ecef;">
-    <div style="display: flex; align-items: baseline;">
-      <span style="font-size: 20px; color: #666; margin-right: 12px; min-width: 30px;">{{ total_count | minus: forloop.index0 }}.</span>
-      <div style="flex: 1;">
-        <h3 style="font-size: 20px; color: #0c2340; margin: 0 0 3px 0; font-weight: 600; line-height: 1.2;">
-          <a href="{{ publi.link.url }}" target="_blank" style="color: #0c2340; text-decoration: none;">{{ publi.title }}</a>
-        </h3>
-        <p style="font-size: 20px; color: #666; margin: 0 0 2px 0; line-height: 1.2;">{{ publi.authors }}</p>
-        <p style="font-size: 20px; color: #ae9142; margin: 0; font-weight: 500; line-height: 1.2;">{{ publi.link.display }}</p>
-      </div>
+  <!-- Hero -->
+  <section class="home-hero" style="border-bottom: 1px solid var(--rule); margin-bottom: 24px;">
+    <div class="hero-main">
+      <span class="eyebrow">Research output · {{ site.data.publist.size }} papers</span>
+      <h1 class="hero-headline">Publications<em>.</em></h1>
     </div>
-  </div>
-  {% endfor %}
-</div> 
+    <div class="hero-side">
+      <p class="lead">
+        Peer-reviewed publications from the MINE lab. For the most up-to-date list, see Prof. Zhang's
+        <a href="https://scholar.google.com/citations?user=A2bzZv0AAAAJ" target="_blank" rel="noopener">Google&nbsp;Scholar</a>
+        and <a href="https://sites.nd.edu/xiangliang-zhang/publications/" target="_blank" rel="noopener">homepage</a>.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    {% assign total_count = site.data.publist.size %}
+    {% for publi in site.data.publist %}
+      <div class="publication-row">
+        <div class="publication-index">{{ total_count | minus: forloop.index0 }}.</div>
+        <div>
+          <h3 class="publication-title">
+            {% if publi.link.url and publi.link.url != "" %}
+              <a href="{{ publi.link.url }}" target="_blank" rel="noopener">{{ publi.title }}</a>
+            {% else %}
+              {{ publi.title }}
+            {% endif %}
+            {% if publi.highlight == 1 %}<span class="publication-tag">Highlighted</span>{% endif %}
+          </h3>
+          <p class="publication-authors">{{ publi.authors }}</p>
+          <p class="publication-venue">{{ publi.link.display }}</p>
+          {% if publi.news1 %}
+            <p style="margin: 6px 0 0 0; font-size: 0.96rem; color: var(--ink-soft);">
+              {{ publi.news1 | markdownify | strip_html | strip }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+</div>

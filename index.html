@@ -1,157 +1,219 @@
 ---
 layout: default
-title: "MINE Lab - Home"
-excerpt: "MINE Lab at University of Notre Dame - Machine Intelligence and kNowledge Engineering"
+title: "MINE Lab — Machine Intelligence and kNowledge Engineering"
+excerpt: "MINE Lab at University of Notre Dame, directed by Prof. Xiangliang Zhang. We work on trustworthy foundation models, AI for science, and graph learning."
 permalink: /
 ---
 
-<div class="col-sm-12">
-  <div style="width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
-    
-    <!-- Main Header -->
-    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); text-align: center; padding: 40px 0 30px 0; margin: -20px -20px 0 -20px; border-radius: 0 0 15px 15px; animation: fadeInDown 0.8s ease-out;">
-      <h1 style="font-size: 42px; font-weight: 300; color: #0c2340; margin-bottom: 8px; line-height: 1.1; animation: slideInUp 1s ease-out 0.2s both;">
-        Machine Intelligence and kNowledge Engineering Lab
-      </h1>
-      <p style="font-size: 24px; color: #0c2340; margin-bottom: 0; font-weight: 400; line-height: 1.2; animation: slideInUp 1s ease-out 0.4s both;">
-        University of Notre Dame, Department of Computer Science and Engineering
+<div class="page">
+
+  <!-- HERO -->
+  <section class="home-hero fade-up">
+    <div class="hero-main">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab — Machine Intelligence and kNowledge Engineering" class="hero-logo">
+      <span class="eyebrow">University of Notre Dame · Computer Science &amp; Engineering</span>
+      <h1 class="hero-headline">Welcome<em>.</em></h1>
+      <p class="hero-tagline">
+        Directed by
+        <a href="https://sites.nd.edu/xiangliang-zhang/" target="_blank" rel="noopener">Prof. Xiangliang Zhang</a>
+        — researching trustworthy foundation models, AI for science, and graph learning.
       </p>
     </div>
-
-    <!-- Intro + News Two-Column -->
-    <div class="row" style="padding: 20px 0; border-bottom: 1px solid #e9ecef; align-items: flex-start;">
-      <div class="col-md-6">
-        <img src="{{ site.url }}{{ site.baseurl }}/images/logo.png" alt="MINE Lab Logo" style="width: 430px; max-width: none !important; height: auto; margin-top: 0; margin-bottom: 8px; box-shadow: none; border-radius: 0; animation: fadeInLeft 1s ease-out 0.6s both;">
-        <p style="font-size: 20px; color: #525252; line-height: 1.3; margin-bottom: 8px; animation: fadeInLeft 1s ease-out 0.8s both;">
-          Welcome to the <strong>MINE lab</strong>, directed by <strong>Prof. Xiangliang Zhang</strong> in the Department of Computer Science and Engineering at the <strong>University of Notre Dame</strong>.
-        </p>
-        <p style="font-size: 20px; color: #525252; line-height: 1.3; margin-bottom: 0; animation: fadeInLeft 1s ease-out 1s both;">
-          In our lab, <strong>"MINE"</strong> signifies more than just its acronym. It represents the <strong>ownership of innovation</strong>, the <strong>discovery of hidden insights</strong>, and the pursuit of untapped potential—much like mining precious resources. Our mission is to enable computer machines to learn through experience and data, fostering breakthroughs in <strong>Artificial Intelligence</strong> that power knowledge advancement across diverse fields. We see ourselves as data "miners," uncovering the treasure troves of knowledge buried in information. At the MINE lab, we cultivate a spirit of curiosity and exploration, where ideas are not just developed—they are owned and celebrated as "mine." If you are a motivated <strong>Ph.D. candidate</strong> ready to claim your place in shaping the future of AI, we welcome you to join the MINE lab at Notre Dame!
-        </p>
+    <div class="hero-side">
+      <p class="lead">
+        We design machine learning systems that learn from complex, large-scale data —
+        with a focus on trustworthy foundation models, AI for chemistry &amp; science,
+        and graph-based learning.
+      </p>
+      <div class="hero-actions">
+        <a href="{{ site.url }}{{ site.baseurl }}/research" class="button">Our research <span aria-hidden="true">→</span></a>
+        <a href="{{ site.url }}{{ site.baseurl }}/publications" class="text-link">Publications <span class="arrow">→</span></a>
       </div>
-      <div class="col-md-6" style="animation: fadeInRight 1s ease-out 0.6s both; margin-top: 30px;">
-        <h2 style="font-size: 28px; font-weight: 500; color: #0c2340; margin: 0 0 10px 0; line-height: 1.2;">News</h2>
-        {% for article in site.data.news limit:4 %}
-        <div class="news-item-simple" style="font-size: 13px !important;">
-          <div style="font-size: 16px !important; color: #666; margin-bottom: 6px; font-weight: 500; line-height: 1.2;">
-            {{ article.date }}
-          </div>
-          <div style="font-size: 13px !important; color: #333; line-height: 1.3;">
-            {{ article.headline | markdownify }}
-          </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-strip fade-up delay-1">
+    <div class="stat-item">
+      <div class="stat-num">{{ site.data.publist.size }}+</div>
+      <div class="stat-label">Peer-reviewed papers</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">17</div>
+      <div class="stat-label">PhDs graduated</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">{{ site.data.students.size }}</div>
+      <div class="stat-label">Current PhD students</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Research thrusts</div>
+    </div>
+  </section>
+
+  <!-- WELCOME / MISSION -->
+  <section class="split-section fade-up delay-2">
+    <div class="split-side">
+      <span class="eyebrow">About the lab</span>
+      <h2 class="split-title">A home for curious data miners.</h2>
+    </div>
+    <div>
+      <p>
+        Welcome to the <strong>MINE lab</strong>, directed by
+        <strong>Prof. Xiangliang Zhang</strong> in the Department of Computer Science and Engineering
+        at the <strong>University of Notre Dame</strong>.
+      </p>
+      <p>
+        In our lab, <strong>“MINE”</strong> represents the ownership of innovation, the discovery of
+        hidden insights, and the pursuit of untapped potential — much like mining precious resources.
+        Our mission is to enable computer machines to learn through experience and data, fostering
+        breakthroughs in <strong>artificial intelligence</strong> that power knowledge advancement
+        across diverse fields.
+      </p>
+      <p style="margin-top: 14px;">
+        <a href="{{ site.url }}{{ site.baseurl }}/team" class="text-link">Meet the team <span class="arrow">→</span></a>
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT WE WORK ON -->
+  <section class="split-section fade-up delay-2" style="border-bottom: none;">
+    <div class="split-side">
+      <span class="eyebrow">What we work on</span>
+      <h2 class="split-title">Three research thrusts.</h2>
+    </div>
+    <div>
+      <div class="features">
+        <article class="feature-card">
+          <div class="feature-num">01</div>
+          <h3>Trustworthy Foundation Models</h3>
+          <p>Principled understanding, alignment, and trust evaluation of generative foundation models — from interpretation to safety.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-num">02</div>
+          <h3>AI for Science</h3>
+          <p>Generative and predictive models for chemistry, biology, physics — and large-scale simulation for the social sciences.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-num">03</div>
+          <h3>Graph-Based Learning</h3>
+          <p>Graph methods for drug discovery, recommendation, and knowledge graphs, leveraging structure to improve real-world decisions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="split-section fade-up delay-3">
+    <div class="split-side">
+      <span class="eyebrow">Latest</span>
+      <h2 class="split-title">News.</h2>
+      <p style="margin-top: 14px;">
+        <a href="{{ site.url }}{{ site.baseurl }}/allnews.html" class="text-link">All news <span class="arrow">→</span></a>
+      </p>
+    </div>
+    <div>
+      <div class="news-list">
+        {% for article in site.data.news limit:5 %}
+        <div class="news-row">
+          <span class="news-date">{{ article.date }}</span>
+          <div class="news-body">{{ article.headline | markdownify }}</div>
         </div>
         {% endfor %}
-        <div style="margin-top: 10px;">
-          <a href="{{ site.url }}{{ site.baseurl }}/allnews.html" style="color: #0c2340; text-decoration: none; font-weight: 500; font-size: 18px;">View all news →</a>
-        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Incoming Events Section -->
-    <div class="row" style="padding: 20px 0; border-bottom: 1px solid #e9ecef;">
-      <div class="col-md-12">
-        <h2 style="font-size: 28px; font-weight: 500; color: #0c2340; margin: 0 0 20px 0; line-height: 1.2; animation: fadeInUp 1s ease-out 0.8s both;">Events</h2>
-        
-        <div class="row">
-          <!-- Event 1 -->
-          <div class="col-md-6" style="margin-bottom: 15px;">
-            <div class="event-item" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 15px; border-radius: 8px; border-left: 4px solid #0c2340; box-shadow: 0 2px 8px rgba(0,0,0,0.05); animation: fadeInUp 1s ease-out 1s both; height: 100%;">
-              <h3 style="font-size: 18px; font-weight: 600; color: #0c2340; margin: 0 0 8px 0; line-height: 1.2;">
-                <strong>Tutorial:</strong> Towards Trustworthy and Socially Responsible Generative Foundation Models
+  <!-- RECENT PUBLICATIONS -->
+  <section class="split-section fade-up delay-3">
+    <div class="split-side">
+      <span class="eyebrow">Selected</span>
+      <h2 class="split-title">Recent publications.</h2>
+      <p style="margin-top: 14px;">
+        <a href="{{ site.url }}{{ site.baseurl }}/publications" class="text-link">All {{ site.data.publist.size }} papers <span class="arrow">→</span></a>
+      </p>
+    </div>
+    <div>
+      {% assign featured_count = 0 %}
+      {% for publi in site.data.publist %}
+        {% if publi.highlight == 1 and featured_count < 5 %}
+          {% assign venue_short = publi.link.display | split: ',' | first | split: '(' | first | strip %}
+          <div class="publication-row">
+            <div class="publication-index">{{ venue_short | split: ' ' | last }}</div>
+            <div>
+              <h3 class="publication-title">
+                {% if publi.link.url and publi.link.url != "" %}
+                  <a href="{{ publi.link.url }}" target="_blank" rel="noopener">{{ publi.title }}</a>
+                {% else %}
+                  {{ publi.title }}
+                {% endif %}
               </h3>
-              <p style="font-size: 17px; color: #666; margin: 0 0 6px 0; font-weight: 600;">
-                AAAI 2026
-              </p>
-              <a href="https://aaai26-trustgenfm.github.io/" target="_blank" style="color: #0c2340; text-decoration: none; font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#1a4a80'" onmouseout="this.style.color='#0c2340'">
-                Learn more →
-              </a>
+              <p class="publication-authors">{{ publi.authors }}</p>
+              <p class="publication-venue">{{ venue_short }}</p>
             </div>
           </div>
-          
-          <!-- Event 2 -->
-          <div class="col-md-6" style="margin-bottom: 15px;">
-            <div class="event-item" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 15px; border-radius: 8px; border-left: 4px solid #0c2340; box-shadow: 0 2px 8px rgba(0,0,0,0.05); animation: fadeInUp 1s ease-out 1.2s both; height: 100%;">
-              <h3 style="font-size: 18px; font-weight: 600; color: #0c2340; margin: 0 0 8px 0; line-height: 1.2;">
-                <strong>Tutorial:</strong> Socially Responsible and Trustworthy Generative Foundation Models: Principles, Challenges, and Practices
-              </h3>
-              <p style="font-size: 17px; color: #666; margin: 0 0 6px 0; font-weight: 600;">
-                CIKM 2025
-              </p>
-              <a href="https://tutorial-trustgenfm.github.io/" target="_blank" style="color: #0c2340; text-decoration: none; font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#1a4a80'" onmouseout="this.style.color='#0c2340'">
-                Learn more →
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <!-- Event 3 -->
-          <div class="col-md-6" style="margin-bottom: 15px;">
-            <div class="event-item" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 15px; border-radius: 8px; border-left: 4px solid #0c2340; box-shadow: 0 2px 8px rgba(0,0,0,0.05); animation: fadeInUp 1s ease-out 1.4s both; height: 100%;">
-              <h3 style="font-size: 18px; font-weight: 600; color: #0c2340; margin: 0 0 8px 0; line-height: 1.2;">
-                <strong>Tutorial:</strong> Generative Models for Synthetic Data: Transforming Data Mining in the GenAI Era
-              </h3>
-              <p style="font-size: 17px; color: #666; margin: 0 0 6px 0; font-weight: 600;">
-                CIKM 2025
-              </p>
-              <a href="https://syndata4dm.github.io/" target="_blank" style="color: #0c2340; text-decoration: none; font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#1a4a80'" onmouseout="this.style.color='#0c2340'">
-                Learn more →
-              </a>
-            </div>
-          </div>
-          
-          <!-- Event 4 -->
-          <div class="col-md-6" style="margin-bottom: 15px;">
-            <div class="event-item" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 15px; border-radius: 8px; border-left: 4px solid #0c2340; box-shadow: 0 2px 8px rgba(0,0,0,0.05); animation: fadeInUp 1s ease-out 1.6s both; height: 100%;">
-              <h3 style="font-size: 18px; font-weight: 600; color: #0c2340; margin: 0 0 8px 0; line-height: 1.2;">
-                <strong>Workshop:</strong> Knowledge-Intensive Multimodal Reasoning
-              </h3>
-              <p style="font-size: 17px; color: #666; margin: 0 0 6px 0; font-weight: 600;">
-                ICCV 2025, October 22 2025, Hawaii
-              </p>
-              <a href="https://knowledgemr-workshop.github.io/" target="_blank" style="color: #0c2340; text-decoration: none; font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#1a4a80'" onmouseout="this.style.color='#0c2340'">
-                Learn more →
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row">
-          <!-- Event 5 -->
-          <div class="col-md-6" style="margin-bottom: 15px;">
-            <div class="event-item" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 15px; border-radius: 8px; border-left: 4px solid #0c2340; box-shadow: 0 2px 8px rgba(0,0,0,0.05); animation: fadeInUp 1s ease-out 1.8s both; height: 100%;">
-              <h3 style="font-size: 18px; font-weight: 600; color: #0c2340; margin: 0 0 8px 0; line-height: 1.2;">
-                <strong>Tutorial:</strong> Multimodal Mathematical Reasoning: Frontiers in Integrating Vision, Language, and Symbolic Representations
-              </h3>
-              <p style="font-size: 17px; color: #666; margin: 0 0 6px 0; font-weight: 600;">
-                CVPR 2025
-              </p>
-              <a href="https://cvpr2025mutimodalmathreasoning.github.io/MM_math_reasoning/" target="_blank" style="color: #0c2340; text-decoration: none; font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.color='#1a4a80'" onmouseout="this.style.color='#0c2340'">
-                Learn more →
-              </a>
-            </div>
-          </div>
-          
-          <!-- Empty space for symmetry -->
-          <div class="col-md-6" style="margin-bottom: 15px;">
-          </div>
-        </div>
+          {% assign featured_count = featured_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="split-section fade-up delay-3" style="border-bottom: none;">
+    <div class="split-side">
+      <span class="eyebrow">Tutorials &amp; workshops</span>
+      <h2 class="split-title">Events we're<br>organizing.</h2>
+    </div>
+    <div>
+      <div class="events-grid" style="margin-top: 0;">
+        <article class="event-card">
+          <span class="event-kind">Tutorial · AAAI 2026</span>
+          <h3>Towards Trustworthy and Socially Responsible Generative Foundation Models</h3>
+          <a class="text-link" href="https://aaai26-trustgenfm.github.io/" target="_blank" rel="noopener">Learn more <span class="arrow">→</span></a>
+        </article>
+        <article class="event-card">
+          <span class="event-kind">Workshop · KDD 2026</span>
+          <h3>Reliable Scientific Foundation Models (RelSciFM)</h3>
+          <a class="text-link" href="https://kdd26-relscifm.github.io/" target="_blank" rel="noopener">Learn more <span class="arrow">→</span></a>
+        </article>
+        <article class="event-card">
+          <span class="event-kind">Workshop · CVPR 2026</span>
+          <h3>Knowledge-Intensive Multimodal Reasoning (2nd edition)</h3>
+          <a class="text-link" href="https://knowledgemr-workshop.github.io/" target="_blank" rel="noopener">Learn more <span class="arrow">→</span></a>
+        </article>
+        <article class="event-card">
+          <span class="event-kind">Tutorial · CIKM 2025</span>
+          <h3>Socially Responsible &amp; Trustworthy Generative Foundation Models</h3>
+          <a class="text-link" href="https://tutorial-trustgenfm.github.io/" target="_blank" rel="noopener">Learn more <span class="arrow">→</span></a>
+        </article>
+        <article class="event-card">
+          <span class="event-kind">Tutorial · CIKM 2025</span>
+          <h3>Generative Models for Synthetic Data in the GenAI Era</h3>
+          <a class="text-link" href="https://syndata4dm.github.io/" target="_blank" rel="noopener">Learn more <span class="arrow">→</span></a>
+        </article>
+        <article class="event-card">
+          <span class="event-kind">Tutorial · CVPR 2025</span>
+          <h3>Multimodal Mathematical Reasoning</h3>
+          <a class="text-link" href="https://cvpr2025mutimodalmathreasoning.github.io/MM_math_reasoning/" target="_blank" rel="noopener">Learn more <span class="arrow">→</span></a>
+        </article>
       </div>
     </div>
+  </section>
 
-    <!-- Notre Dame Campus -->
-    <div style="padding: 25px 0; text-align: center;">
-      <img src="{{ site.url }}{{ site.baseurl }}/images/notre_dame.jpg" alt="University of Notre Dame Campus" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <!-- CTA -->
+  <div class="cta-banner fade-up delay-4">
+    <div>
+      <h3>We are looking for motivated PhD students.</h3>
+      <p>Open positions for PhDs, postdocs, and visiting researchers.</p>
     </div>
-
-
-
-    <!-- Navigation Links -->
-    <div style="text-align: center; padding: 25px 0; animation: fadeInUp 1s ease-out 1.2s both;">
-      <a href="{{ site.url }}{{ site.baseurl }}/research" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; background-color: #0c2340; color: white; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.1)'">Research</a>
-      <a href="{{ site.url }}{{ site.baseurl }}/team" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; border: 1px solid #0c2340; color: #0c2340; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.backgroundColor='#0c2340'; this.style.color='white'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='transparent'; this.style.color='#0c2340'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.1)'">Team</a>
-      <a href="{{ site.url }}{{ site.baseurl }}/publications" style="display: inline-block; margin: 0 15px 10px 15px; padding: 12px 25px; border: 1px solid #0c2340; color: #0c2340; text-decoration: none; border-radius: 4px; font-weight: 500; font-size: 18px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-2px)'; this.style.backgroundColor='#0c2340'; this.style.color='white'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.backgroundColor='transparent'; this.style.color='#0c2340'; this.style.boxShadow='0 2px 5px rgba(0,0,0,0.1)'">Publications</a>
-    </div>
-
+    <a class="button" href="{{ site.url }}{{ site.baseurl }}/vacancies">See openings <span aria-hidden="true">→</span></a>
   </div>
+
+  <!-- Notre Dame banner -->
+  <div class="campus-banner fade-up delay-4">
+    <img src="{{ site.url }}{{ site.baseurl }}/images/notre_dame.jpg" alt="University of Notre Dame Campus">
+    <div class="campus-caption">University of Notre Dame · South Bend, Indiana</div>
+  </div>
+
 </div>

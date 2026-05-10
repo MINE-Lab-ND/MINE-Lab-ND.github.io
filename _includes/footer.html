@@ -1,34 +1,22 @@
-<div id="footer" class="panel">
-	<div class="container-fluid">
-		<div class="row" style="display: flex; align-items: center; justify-content: space-between; padding: 8px 0; flex-wrap: wrap;">
-			<div style="font-size: 14px; color: #333; margin-bottom: 5px; flex: 1; min-width: 250px;">
-				<span>MINE Lab, University of Notre Dame</span>
-				<span style="margin-left: 12px;">&copy; 2024</span>
-			</div>
-			<div style="font-size: 14px; color: #333; text-align: right; margin-bottom: 5px; flex: 1; min-width: 300px;">
-				<span>354 Fitzpatrick Hall, University of Notre Dame, Notre Dame, IN 46556, USA</span>
-			</div>
-		</div>
-	</div>
-</div>
+<footer id="footer">
+  <div class="container-fluid">
+    <div class="footer-grid">
+      <div class="footer-brand-block">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/mine_logo.png" alt="MINE Lab" class="footer-logo">
+        <div>
+          <div class="footer-brand">MINE Lab</div>
+          <div class="footer-meta">
+            Machine Intelligence and kNowledge Engineering Lab · University of Notre Dame
+          </div>
+        </div>
+      </div>
+      <div class="footer-meta" style="text-align: right; min-width: 280px;">
+        354 Fitzpatrick Hall, University of Notre Dame, Notre Dame, IN 46556, USA<br>
+        &copy; {{ 'now' | date: "%Y" }} · Directed by <a href="https://sites.nd.edu/xiangliang-zhang/" target="_blank" rel="noopener">Prof. Xiangliang Zhang</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-<!-- Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
-<!-- Add a smooth scroll effect -->
-<script>
-	$(document).ready(function() {
-		// Add smooth scrolling to all links
-		$("a").on('click', function(event) {
-			if (this.hash !== "") {
-				event.preventDefault();
-				var hash = this.hash;
-				$('html, body').animate({
-					scrollTop: $(hash).offset().top
-				}, 800, function(){
-					window.location.hash = hash;
-				});
-			}
-		});
-	});
-</script>

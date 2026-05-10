@@ -1,23 +1,29 @@
+- date: Mar. 2026
+  headline: "Call for papers! We are co-organizing several workshops: [KDD 2026 Workshop on Agentic AI for Scientific and Societal Advances](https://openreview.net/group?id=KDD.org/2026/Workshop/SciSoc_Agents_and_LLMs), [KDD 2026 Workshop on Reliable Scientific Foundation Models (RelSciFM)](https://kdd26-relscifm.github.io/), [AI for Education Day at KDD 2026](https://sites.google.com/view/aiedkdd26), [CVPR 2026 – 2nd Workshop on Knowledge-Intensive Multimodal Reasoning](https://knowledgemr-workshop.github.io/), and the upcoming ICML 2026 Workshop on AI for Physics (AI4Physics). Welcome submissions!"
+
+- date: Jan. 2026
+  headline: "Congratulations to [Yue Huang](https://howiehwong.github.io/) for his papers accepted by ICLR 2026! Check the recent contributions on [Benchmarking Generative Foundation Models (TrustGen)](https://openreview.net/pdf?id=Fcf5fLmaeG) and [Guardrail for General Agentic Systems](https://openreview.net/pdf?id=M47SWYubR5). Our work [Benchmarking Large Language Models on Safety Issues in Scientific Labs](https://arxiv.org/abs/2410.14182) was highlighted by [New Scientist](https://www.newscientist.com/article/2511098-all-major-ai-models-risk-encouraging-dangerous-science-experiments/) and [Science News](https://www.science.org/content/article/leading-ai-models-miss-dangerous-lab-risks)."
+
+- date: Nov. 2025
+  headline: "Congratulations to [Yue Huang](https://howiehwong.github.io/), [Xiaonan Luo](https://scholar.google.com/citations?user=35otsO4AAAAJ&hl=en), and [Xiangqi Wang](https://xiangqiwang77.github.io/mainpage/) for their papers accepted by AAAI 2026! Congratulations to [Yujun Zhou](https://yujunzhou.github.io/) for the paper *Benchmarking Large Language Models on Safety Issues in Scientific Labs*, to appear in **Nature Machine Intelligence**."
+
 - date: Sep. 2025
-  headline: "Congratulations to Yue Huang and Xiangqi Wang for their papers accepted by NeurIPS 2025!"
+  headline: "Congratulations to [Yue Huang](https://howiehwong.github.io/) and [Xiangqi Wang](https://xiangqiwang77.github.io/mainpage/) for their papers accepted by NeurIPS 2025! We are also organizing an [AI for Scientific Research Workshop](https://ai4research-workshop.github.io/) at AAAI 2026—welcome to submit!"
 
-- date: Jul. 2025
-  headline: "Congratulations to Yue Huang and our co-authors for winning the Best Paper Award at the KDD 2025 SciSoc LLM Workshop for our paper \"Evaluating Large Language Models with Psychometrics\", and the Best Paper Award at the ICML2025 Workshop on Data in Generative Models (DIG-BUG) for our paper \"Preference Leakage: A Contamination Problem in LLM-as-a-Judge\". Many thanks to all our collaborators for their valuable contributions."
-
-- date: Jul. 2025
-  headline: "Congratulations to Yue Huang, Kehan, Yili for their papers accepted at CIKM 2025 and COLM 2025!"
+- date: Aug. 2025
+  headline: "Congratulations to [Yue Huang](https://howiehwong.github.io/) and our co-authors for winning the **Best Paper Award** at the KDD 2025 SciSoc LLM Workshop for *Evaluating Large Language Models with Psychometrics*, and the **Best Paper Award** at the ICML 2025 Workshop on Data in Generative Models (DIG-BUG) for *Preference Leakage: A Contamination Problem in LLM-as-a-Judge*. Many thanks to all our collaborators! Congratulations also to [Yue Huang](https://howiehwong.github.io/), [Kehan](https://kehanguo2.github.io/), and [Yili](https://yilish.github.io/) for their papers accepted at CIKM 2025."
 
 - date: May. 2025
-  headline: "1) Congratulations to Yue Huang, Kehan, Yili, Tianyu, and Haomin for their recent publications at ICLR'25, IJCAI'25 and ACL'25! 2) Congratulations to Zhenwen, and Manal, your graduations bring the number of PhDs from our lab to 17!"
+  headline: "With the support of the [Lucy Family Institute for Data & Society](https://lucyinstitute.nd.edu/), the **Foundation Models and Applications Lab (FMAL)** is launched! It is co-directed by Prof. Xiangliang Zhang and Prof. Meng Jiang. There is an opening for a postdoctoral researcher on Foundation Models and Applications—[contact us](mailto:xzhang33@nd.edu) if interested! Congratulations to Yue Huang, Kehan, Yili, Tianyu, and Haomin for recent publications at ICLR'25, IJCAI'25, and ACL'25. Congratulations to Zhenwen and Manal—your graduations bring our lab's PhD count to 17!"
 
 - date: Sep. 2024
-  headline: 1) Three papers are accepted by NeurIPS 2024 (1 highlight and 2 poster). Congratulations to Kehan and Yue Huang. Four papers are accepted by EMNLP 2024. Congratulations to Yujun, Yue Huang, Ziyi and Tianyu. 2) We launch the IEEE CS North America Student Challenge 2024 today. Welcome to participate the competition on Inferring User Latent Preference from Conversations with LLM, and win the prize.
+  headline: "Three papers accepted by NeurIPS 2024 (1 highlight, 2 posters). Congratulations to Kehan and Yue Huang. Four papers accepted by EMNLP 2024—congratulations to Yujun, Yue Huang, Ziyi, and Tianyu. We also launched the IEEE CS North America Student Challenge 2024 on Inferring User Latent Preference from Conversations with LLM."
 
 - date: May. 2024
-  headline: "1) Congratulations to Ziyi! The 15th PhD graduated from our lab, with his thesis--Exploring Trustworthy Concerns in Computer Vision: From Deterministic To Generative Domains. 2) Two paper are accepted by ICML 2024, one paper is accepted by ACL 2024, two paper are accepted by KDD 2024, and one paper is accepted by IJCAI 2024. Congratulations to Yue Huang, Yujun, Taicheng, Zhenwen and Ziyi."
+  headline: "Congratulations to Ziyi—the 15th PhD graduated from our lab, with his thesis *Exploring Trustworthy Concerns in Computer Vision: From Deterministic to Generative Domains*. Two papers accepted by ICML 2024, one by ACL 2024, two by KDD 2024, and one by IJCAI 2024. Congratulations to Yue Huang, Yujun, Taicheng, Zhenwen, and Ziyi."
 
 - date: Oct. 2023
-  headline: Congratulations to Zhenwen! Two of his recent papers, focused on solving Math Word Problems, have been accepted for EMNLP 2023.
+  headline: "Congratulations to Zhenwen! Two of his recent papers, focused on solving Math Word Problems, have been accepted at EMNLP 2023."
 
 - date: Sep. 2023
-  headline: "PI Dr. Zhang is awarded another NSF grant (1.5 million US dollars) for the research project of Exploiting Federal Data and Beyond: A Multi-modal Knowledge Network for Comprehensive Wildlife Management under Climate Change."
+  headline: "PI Dr. Zhang is awarded another NSF grant ($1.5 million) for the project *Exploiting Federal Data and Beyond: A Multi-modal Knowledge Network for Comprehensive Wildlife Management under Climate Change*."

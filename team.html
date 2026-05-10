@@ -1,181 +1,162 @@
 ---
 layout: default
-title: "MINE Lab - Team"
-excerpt: "MINE Lab: Team members"
+title: "Team · MINE Lab"
+excerpt: "Meet the principal investigator, PhD students, and alumni of the MINE Lab at the University of Notre Dame."
 permalink: /team/
 ---
 
-<div class="container" style="padding-top: 30px;">
-  <h1 style="text-align: center; color: #0c2340; margin-bottom: 30px;">Our Team</h1>
-</div>
+<div class="page">
 
-<!-- Principal Investigator Section -->
-<div class="pi-section">
-  <div class="container">
-    <h2 class="section-title">Principal Investigator</h2>
-    
-    <div class="row">
-      <div class="col-sm-12 col-md-4 text-center">
-        <div class="pi-image-container">
-          <img src="{{ site.url }}{{ site.baseurl }}/images/xzhang.jpg" alt="Dr. Xiangliang Zhang" class="img-circle">
-        </div>
-        <h3>Xiangliang Zhang</h3>
-        <p>Leonard C. Bettex Collegiate Professor</p>
-        <p>Department of Computer Science and Engineering</p>
+  <!-- Hero -->
+  <section class="home-hero" style="border-bottom: 1px solid var(--rule); margin-bottom: 28px;">
+    <div class="hero-main">
+      <span class="eyebrow">People</span>
+      <h1 class="hero-headline">Team<em>.</em></h1>
+    </div>
+    <div class="hero-side">
+      <p class="lead">
+        A close-knit group of researchers exploring trustworthy AI, AI for science, and graph learning at the University of Notre Dame.
+      </p>
+    </div>
+  </section>
+
+  <!-- PI -->
+  <section class="split-section">
+    <div class="split-side">
+      <span class="eyebrow">Principal Investigator</span>
+      <h2 class="split-title">Xiangliang Zhang</h2>
+      <p style="margin-top: 14px;">
+        <a href="https://sites.nd.edu/xiangliang-zhang/" class="text-link" target="_blank" rel="noopener">Homepage <span class="arrow">→</span></a>
+      </p>
+    </div>
+    <div class="pi-grid" style="margin-bottom: 0;">
+      <div>
+        <img class="pi-photo" src="{{ site.url }}{{ site.baseurl }}/images/xzhang.jpg" alt="Dr. Xiangliang Zhang">
+        <div class="pi-name">Xiangliang (Lynn) Zhang</div>
+        <p class="pi-title">Leonard C. Bettex Collegiate Professor</p>
+        <p class="pi-title">Computer Science &amp; Engineering</p>
+        <p class="pi-title">
+          <a href="https://scholar.google.com/citations?user=A2bzZv0AAAAJ" target="_blank" rel="noopener">Scholar</a> ·
+          <a href="https://sites.nd.edu/xiangliang-zhang/" target="_blank" rel="noopener">Site</a>
+        </p>
       </div>
-      
-      <div class="col-sm-12 col-md-8">
-        <div class="pi-bio">
-          <p style="font-size: 17px;">Dr. Zhang is a Leonard C. Bettex Collegiate Professor of Computer Science at University of Notre Dame, where she is leading a Machine Intelligence and kNowledge Engineering (MINE) group.
-
-            Her research broadly addresses ways that enable ​computer machines to​ learn by the use of diverse types of data. Specifically, she is interested in designing machine learning algorithms for learning from complex and large-scale streaming data and graph data, with applications to recommendation systems, knowledge discovery, and natural language understanding. Her recent research notably advances the application of AI in scientific disciplines such as Chemistry, Biology and Physics. More information can be found in the publications grouped by research problems, or the full list of over 270 peer-reviewed papers.
-            
-            She was invited to deliver an Early Career Spotlight talk at IJCAI-ECAI 2018. In 2009, she was awarded the European Research Consortium for Informatics and Mathematics (ERCIM) Alain Bensoussan Fellowship. She regularly serve on the Program Committee for premier conferences like SIGKDD (Area Chair, Senior PC), AAAI (Area Chair, Senior PC), IJCAI (Area Chair, Senior PC), etc. She also serves as Editor-in-Chief of ACM SIGKDD Explorations, associated editor for IEEE Transactions on Dependable and Secure Computing (TDSC) and Information Sciences. She recently serves as the PC Co-chair of KDD 2026 (research track).
-            
-            Prior to joining the University of Notre Dame, she was an Associate Professor in Computer Science at KAUST, Saudi Arabia. She completed her Ph.D. degree in computer science from INRIA-University Paris-Sud, France, in July 2010. She received her master and bachelor degrees from Xi’an Jiaotong University, China.</p>          
-        </div>
+      <div>
+        <p>
+          Dr. Zhang leads the <strong>Machine Intelligence and kNowledge Engineering (MINE)</strong>
+          group at the University of Notre Dame. Her research broadly addresses ways that enable
+          computer machines to learn by the use of diverse types of data, with a focus on
+          machine learning algorithms for complex, large-scale streaming and graph data —
+          and applications to recommendation systems, knowledge discovery, and natural language understanding.
+        </p>
+        <p>
+          Her recent work notably advances the application of AI in <strong>chemistry, biology, and physics</strong>.
+          She delivered an Early Career Spotlight talk at IJCAI-ECAI 2018, was awarded the ERCIM Alain Bensoussan
+          Fellowship in 2009, and regularly serves as Area Chair / Senior PC at SIGKDD, AAAI, and IJCAI. She is
+          Editor-in-Chief of <em>ACM SIGKDD Explorations</em>, an associate editor for ACM TKDD and Information Sciences,
+          and PC Co-chair of <strong>KDD 2026</strong> research track.
+        </p>
+        <p>
+          Prior to joining Notre Dame, she was an Associate Professor at KAUST. She received her PhD from
+          INRIA-Université Paris-Sud (France) in 2010, and her Bachelor's and Master's degrees from Xi'an Jiaotong University.
+        </p>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="join-us-banner">
-  <div class="container text-center">
-    <h3>We invite open research collaborations!</h3>
-    <p>Check out our <a href="{{ site.url }}{{ site.baseurl }}/vacancies">openings</a> for opportunities to join our team.</p>
-  </div>
-</div>
-
-<!-- PhD Students Section -->
-<div class="team-section">
-  <div class="container">
-    <h2 class="section-title">PhD Students</h2>
-    
-    <div class="row">
-    {% assign number_printed = 0 %}
-    {% for member in site.data.students %}
-
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-card" style="text-align:center; padding: 20px; margin-bottom: 20px;">
-        <div class="team-card-image" style="margin-bottom: 15px;">
-          <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" style="width: 220px; height: 260px; object-fit: cover; border-radius: 0; margin: 0 auto; display: block;">
-        </div>
-        <div class="team-card-content" style="padding: 0;">
-          {% assign start_term = member.info | split: 'started ' | last %}
-          {% assign start_term = start_term | split: ' (' | first %}
+  <!-- PhD Students -->
+  <section class="split-section">
+    <div class="split-side">
+      <span class="eyebrow">Researchers in training</span>
+      <h2 class="split-title">PhD students.</h2>
+      <p style="margin-top: 14px;">{{ site.data.students.size }} current PhDs working across our three research thrusts.</p>
+    </div>
+    <div>
+      <div class="team-grid">
+        {% for member in site.data.students %}
+          {% assign start_term = member.info | split: 'started ' | last | split: ' (' | first %}
           {% assign website_url = member.info | split: 'href="' | last | split: '">' | first %}
-          <h4 style="margin-bottom: 10px; font-size: 1.8rem; line-height: 1.2;">
-            <a href="{{ website_url }}" target="_blank" style="color:#0c2340; text-decoration:none;">{{ member.name }}</a>
-          </h4>
-          <p style="margin:0; font-size: 1.3rem; color:#666;">{{ start_term }}</p>
-        </div>
+          <article class="member-card">
+            <img class="photo" src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" alt="{{ member.name }}">
+            <div class="body">
+              <div class="name">
+                {% if website_url and website_url != member.info %}
+                  <a href="{{ website_url }}" target="_blank" rel="noopener">{{ member.name }}</a>
+                {% else %}
+                  {{ member.name }}
+                {% endif %}
+              </div>
+              <p class="meta">{{ start_term }}</p>
+            </div>
+          </article>
+        {% endfor %}
       </div>
     </div>
+  </section>
 
-    {% assign number_printed = number_printed | plus: 1 %}
-    {% endfor %}
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div>
+      <h3>We invite open research collaborations.</h3>
+      <p>Several openings are available for PhD students, postdocs, and visiting researchers.</p>
     </div>
+    <a class="button" href="{{ site.url }}{{ site.baseurl }}/vacancies">See openings <span aria-hidden="true">→</span></a>
   </div>
-</div>
 
-<!-- Alumni Section -->
-<div class="team-section alumni-section">
-  <div class="container">
-    <h2 class="section-title">Alumni</h2>
-    
-    <div class="row">
-    {% for member in site.data.alumni_members %}
-      <div class="col-xs-12 col-sm-4">
-        <div class="alumni-card" style="text-align: center; padding: 18px; margin-bottom: 22px; border: 1px solid #e9ecef; border-radius: 8px;">
-          <h4 style="font-size: 1.6rem; color: #0c2340; margin-bottom: 8px; line-height: 1.2;">{{ member.name }}</h4>
-          <p style="font-size: 1.2rem; color: #666; margin-bottom: 0; line-height: 1.3;">{{ member.info }}</p>
-        </div>
-      </div>
-    {% endfor %}
+  <!-- Alumni -->
+  <section class="split-section">
+    <div class="split-side">
+      <span class="eyebrow">Family</span>
+      <h2 class="split-title">Alumni.</h2>
+      <p style="margin-top: 14px;">PhD graduates and former lab members carrying their work forward.</p>
     </div>
-  </div>
-</div>
-
-<!-- Pets Section -->
-<div class="team-section pets-section">
-  <div class="container">
-    <h2 class="section-title">Pets Scholars</h2>
-    
-    {% for member in site.data.alumni_pets %}
-      <div class="pet-card-row" style="display: flex; align-items: center; margin-bottom: 30px; padding: 20px; border: 1px solid #e9ecef; border-radius: 8px;">
-        <div class="pet-image" style="flex-shrink: 0; margin-right: 20px;">
-          <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%;">
-        </div>
-        <div class="pet-info" style="flex: 1;">
-          <h4 style="color: #0c2340; margin-bottom: 10px; font-size: 1.8rem; font-weight: 600;">{{ member.name }}</h4>
-          <p style="margin-bottom: 0; line-height: 1.4;">{{ member.info }}</p>
-        </div>
+    <div>
+      <div class="alumni-grid">
+        {% for member in site.data.alumni_members %}
+          <div class="alumni-card">
+            <div class="name">{{ member.name }}</div>
+            <p class="meta">{{ member.info }}</p>
+          </div>
+        {% endfor %}
       </div>
-    {% endfor %}
-  </div>
-</div>
+    </div>
+  </section>
 
-<!-- Former Visitors Section -->
-<div class="team-section visitors-section">
-  <div class="container">
-    <h2 class="section-title">Former Visitors, BSc/MSc Students</h2>
-    
-    <div class="visitor-list">
-      {% for member in site.data.alumni_msc %}
-        <div class="visitor-name">{{ member.name }}</div>
+  <!-- Pets -->
+  {% if site.data.alumni_pets %}
+  <section class="split-section">
+    <div class="split-side">
+      <span class="eyebrow">Honorary scholars</span>
+      <h2 class="split-title">Pet scholars.</h2>
+    </div>
+    <div>
+      {% for member in site.data.alumni_pets %}
+        <div class="pet-card">
+          <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" alt="{{ member.name }}">
+          <div>
+            <div class="name">{{ member.name }}</div>
+            <p style="margin: 0; color: var(--ink-soft); font-size: 1.0rem;">{{ member.info }}</p>
+          </div>
+        </div>
       {% endfor %}
     </div>
-  </div>
-</div>
+  </section>
+  {% endif %}
 
-<!-- Mobile-specific styles -->
-<style>
-  @media (max-width: 767px) {
-    .pi-image-container {
-      margin-bottom: 20px;
-    }
-    
-    .pi-bio {
-      text-align: left;
-      padding: 0 15px;
-    }
-    
-    .team-card {
-      margin-bottom: 30px;
-    }
-    
-    .pet-card {
-      flex-direction: column;
-    }
-    
-    .pet-image, .pet-info {
-      width: 100%;
-    }
-    
-    .visitor-list {
-      padding: 0 15px;
-    }
-    
-    .uniform-size {
-      max-width: 80%;
-      height: auto;
-    }
-    /* Ensure Pets Scholars text is visible on mobile */
-    .pet-card-row {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .pet-card-row .pet-image {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-    .pet-card-row .pet-info {
-      width: 100%;
-    }
-    .pet-card-row img {
-      width: 100%;
-      max-width: 220px;
-      height: auto;
-    }
-  }
-</style> 
+  <!-- Visitors -->
+  {% if site.data.alumni_msc %}
+  <section class="split-section" style="border-bottom: none;">
+    <div class="split-side">
+      <span class="eyebrow">Past collaborators</span>
+      <h2 class="split-title">Visitors &amp; students.</h2>
+    </div>
+    <div>
+      <div class="visitor-list">
+        {% for member in site.data.alumni_msc %}
+          <span class="visitor-name">{{ member.name }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+</div>

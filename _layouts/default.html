@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   {% include head.html %}
 
@@ -7,43 +7,23 @@
 
     {% include header.html %}
 
-    <div class="container-fluid">
-      <div class="row">
-        {{ content }}
-      </div>
-    </div>
+    <main class="site-main">
+      {{ content }}
+    </main>
 
     {% include footer.html %}
 
-    <!-- 粒子效果脚本 -->
-    <script src="{{ site.url }}{{ site.baseurl }}/js/particles.min.js"></script>
-    <script src="{{ site.url }}{{ site.baseurl }}/js/particles-config.js"></script>
-    
-    <!-- 修复响应式布局的脚本 -->
     <script>
-      $(document).ready(function() {
-        // 确保所有图片都有max-width属性
-        $('img').css('max-width', '100%');
-        
-        // 确保所有表格都有响应式样式
-        $('table').addClass('table').wrap('<div class="table-responsive"></div>');
-        
-        // 检测并修复可能导致水平滚动的元素
-        function fixOverflow() {
-          var bodyWidth = $('body').width();
-          $('*').each(function() {
-            if ($(this).width() > bodyWidth && !$(this).is('html') && !$(this).is('body')) {
-              $(this).css({
-                'max-width': '100%',
-                'box-sizing': 'border-box'
-              });
-            }
-          });
-        }
-        
-        // 页面加载和调整大小时执行
-        fixOverflow();
-        $(window).resize(fixOverflow);
+      // Light enhancement: smooth scroll for in-page anchors
+      document.querySelectorAll('a[href^="#"]').forEach(function(link){
+        link.addEventListener('click', function(e){
+          var hash = this.getAttribute('href');
+          if (hash && hash.length > 1 && document.querySelector(hash)) {
+            e.preventDefault();
+            document.querySelector(hash).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.replaceState(null, '', hash);
+          }
+        });
       });
     </script>
   </body>
