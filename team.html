@@ -21,14 +21,16 @@ permalink: /team/
   </section>
 
   <!-- PI -->
-  <section class="split-section">
-    <div class="split-side">
-      <span class="eyebrow">Principal Investigator</span>
-      <h2 class="split-title">Xiangliang Zhang</h2>
-      <p style="margin-top: 14px;">
+  <section class="section-block">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">Principal Investigator</span>
+        <h2 class="head-title">Xiangliang Zhang.</h2>
+      </div>
+      <div class="head-side">
         <a href="https://sites.nd.edu/xiangliang-zhang/" class="text-link" target="_blank" rel="noopener">Homepage <span class="arrow">→</span></a>
-      </p>
-    </div>
+      </div>
+    </header>
     <div class="pi-grid" style="margin-bottom: 0;">
       <div>
         <img class="pi-photo" src="{{ site.url }}{{ site.baseurl }}/images/xzhang.jpg" alt="Dr. Xiangliang Zhang">
@@ -64,32 +66,34 @@ permalink: /team/
   </section>
 
   <!-- PhD Students -->
-  <section class="split-section">
-    <div class="split-side">
-      <span class="eyebrow">Researchers in training</span>
-      <h2 class="split-title">PhD students.</h2>
-      <p style="margin-top: 14px;">{{ site.data.students.size }} current PhDs working across our three research thrusts.</p>
-    </div>
-    <div>
-      <div class="team-grid">
-        {% for member in site.data.students %}
-          {% assign start_term = member.info | split: 'started ' | last | split: ' (' | first %}
-          {% assign website_url = member.info | split: 'href="' | last | split: '">' | first %}
-          <article class="member-card">
-            <img class="photo" src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" alt="{{ member.name }}">
-            <div class="body">
-              <div class="name">
-                {% if website_url and website_url != member.info %}
-                  <a href="{{ website_url }}" target="_blank" rel="noopener">{{ member.name }}</a>
-                {% else %}
-                  {{ member.name }}
-                {% endif %}
-              </div>
-              <p class="meta">{{ start_term }}</p>
-            </div>
-          </article>
-        {% endfor %}
+  <section class="section-block">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">Researchers in training</span>
+        <h2 class="head-title">PhD students.</h2>
       </div>
+      <div class="head-side">
+        <p>{{ site.data.students.size }} current PhDs across our three research thrusts.</p>
+      </div>
+    </header>
+    <div class="team-grid">
+      {% for member in site.data.students %}
+        {% assign start_term = member.info | split: 'started ' | last | split: ' (' | first %}
+        {% assign website_url = member.info | split: 'href="' | last | split: '">' | first %}
+        <article class="member-card">
+          <img class="photo" src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" alt="{{ member.name }}">
+          <div class="body">
+            <div class="name">
+              {% if website_url and website_url != member.info %}
+                <a href="{{ website_url }}" target="_blank" rel="noopener">{{ member.name }}</a>
+              {% else %}
+                {{ member.name }}
+              {% endif %}
+            </div>
+            <p class="meta">{{ start_term }}</p>
+          </div>
+        </article>
+      {% endfor %}
     </div>
   </section>
 
@@ -103,32 +107,36 @@ permalink: /team/
   </div>
 
   <!-- Alumni -->
-  <section class="split-section">
-    <div class="split-side">
-      <span class="eyebrow">Family</span>
-      <h2 class="split-title">Alumni.</h2>
-      <p style="margin-top: 14px;">PhD graduates and former lab members carrying their work forward.</p>
-    </div>
-    <div>
-      <div class="alumni-grid">
-        {% for member in site.data.alumni_members %}
-          <div class="alumni-card">
-            <div class="name">{{ member.name }}</div>
-            <p class="meta">{{ member.info }}</p>
-          </div>
-        {% endfor %}
+  <section class="section-block">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">Family</span>
+        <h2 class="head-title">Alumni.</h2>
       </div>
+      <div class="head-side">
+        <p>PhD graduates and former lab members carrying their work forward.</p>
+      </div>
+    </header>
+    <div class="alumni-grid">
+      {% for member in site.data.alumni_members %}
+        <div class="alumni-card">
+          <div class="name">{{ member.name }}</div>
+          <p class="meta">{{ member.info }}</p>
+        </div>
+      {% endfor %}
     </div>
   </section>
 
   <!-- Pets -->
   {% if site.data.alumni_pets %}
-  <section class="split-section">
-    <div class="split-side">
-      <span class="eyebrow">Honorary scholars</span>
-      <h2 class="split-title">Pet scholars.</h2>
-    </div>
-    <div>
+  <section class="section-block">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">Honorary scholars</span>
+        <h2 class="head-title">Pet scholars.</h2>
+      </div>
+    </header>
+    <div class="pets-grid">
       {% for member in site.data.alumni_pets %}
         <div class="pet-card">
           <img src="{{ site.url }}{{ site.baseurl }}/images/{{ member.photo }}" alt="{{ member.name }}">
@@ -144,17 +152,17 @@ permalink: /team/
 
   <!-- Visitors -->
   {% if site.data.alumni_msc %}
-  <section class="split-section" style="border-bottom: none;">
-    <div class="split-side">
-      <span class="eyebrow">Past collaborators</span>
-      <h2 class="split-title">Visitors &amp; students.</h2>
-    </div>
-    <div>
-      <div class="visitor-list">
-        {% for member in site.data.alumni_msc %}
-          <span class="visitor-name">{{ member.name }}</span>
-        {% endfor %}
+  <section class="section-block no-rule">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">Past collaborators</span>
+        <h2 class="head-title">Visitors &amp; students.</h2>
       </div>
+    </header>
+    <div class="visitor-list">
+      {% for member in site.data.alumni_msc %}
+        <span class="visitor-name">{{ member.name }}</span>
+      {% endfor %}
     </div>
   </section>
   {% endif %}

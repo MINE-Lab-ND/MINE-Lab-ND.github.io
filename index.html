@@ -53,12 +53,17 @@ permalink: /
   </section>
 
   <!-- WELCOME / MISSION -->
-  <section class="split-section fade-up delay-2">
-    <div class="split-side">
-      <span class="eyebrow">About the lab</span>
-      <h2 class="split-title">A home for curious data miners.</h2>
-    </div>
-    <div>
+  <section class="section-block fade-up delay-2">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">About the lab</span>
+        <h2 class="head-title">A home for curious data miners.</h2>
+      </div>
+      <div class="head-side">
+        <a href="{{ site.url }}{{ site.baseurl }}/team" class="text-link">Meet the team <span class="arrow">→</span></a>
+      </div>
+    </header>
+    <div class="about-prose">
       <p>
         Welcome to the <strong>MINE lab</strong>, directed by
         <strong>Prof. Xiangliang Zhang</strong> in the Department of Computer Science and Engineering
@@ -71,88 +76,87 @@ permalink: /
         breakthroughs in <strong>artificial intelligence</strong> that power knowledge advancement
         across diverse fields.
       </p>
-      <p style="margin-top: 14px;">
-        <a href="{{ site.url }}{{ site.baseurl }}/team" class="text-link">Meet the team <span class="arrow">→</span></a>
-      </p>
     </div>
   </section>
 
   <!-- WHAT WE WORK ON -->
-  <section class="split-section fade-up delay-2" style="border-bottom: none;">
-    <div class="split-side">
-      <span class="eyebrow">What we work on</span>
-      <h2 class="split-title">Three research thrusts.</h2>
-    </div>
-    <div>
-      <div class="features">
-        <article class="feature-card">
-          <div class="feature-num">01</div>
-          <h3>Trustworthy Foundation Models</h3>
-          <p>Principled understanding, alignment, and trust evaluation of generative foundation models — from interpretation to safety.</p>
-        </article>
-        <article class="feature-card">
-          <div class="feature-num">02</div>
-          <h3>AI for Science</h3>
-          <p>Generative and predictive models for chemistry, biology, physics — and large-scale simulation for the social sciences.</p>
-        </article>
-        <article class="feature-card">
-          <div class="feature-num">03</div>
-          <h3>Graph-Based Learning</h3>
-          <p>Graph methods for drug discovery, recommendation, and knowledge graphs, leveraging structure to improve real-world decisions.</p>
-        </article>
+  <section class="section-block fade-up delay-2 no-rule">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">What we work on</span>
+        <h2 class="head-title">Three research thrusts.</h2>
       </div>
+      <div class="head-side">
+        <a href="{{ site.url }}{{ site.baseurl }}/research" class="text-link">Explore research <span class="arrow">→</span></a>
+      </div>
+    </header>
+    <div class="features" style="margin-top: 0;">
+      <article class="feature-card">
+        <div class="feature-num">01</div>
+        <h3>Trustworthy Foundation Models</h3>
+        <p>Principled understanding, alignment, and trust evaluation of generative foundation models — from interpretation to safety.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-num">02</div>
+        <h3>AI for Science</h3>
+        <p>Generative and predictive models for chemistry, biology, physics — and large-scale simulation for the social sciences.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-num">03</div>
+        <h3>Graph-Based Learning</h3>
+        <p>Graph methods for drug discovery, recommendation, and knowledge graphs, leveraging structure to improve real-world decisions.</p>
+      </article>
     </div>
   </section>
 
   <!-- NEWS -->
-  <section class="split-section fade-up delay-3">
-    <div class="split-side">
-      <span class="eyebrow">Latest</span>
-      <h2 class="split-title">News.</h2>
-      <p style="margin-top: 14px;">
-        <a href="{{ site.url }}{{ site.baseurl }}/allnews.html" class="text-link">All news <span class="arrow">→</span></a>
-      </p>
-    </div>
-    <div>
-      <div class="news-list">
-        {% for article in site.data.news limit:5 %}
-        <div class="news-row">
-          <span class="news-date">{{ article.date }}</span>
-          <div class="news-body">{{ article.headline | markdownify }}</div>
-        </div>
-        {% endfor %}
+  <section class="section-block fade-up delay-3">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">Latest</span>
+        <h2 class="head-title">News.</h2>
       </div>
+      <div class="head-side">
+        <a href="{{ site.url }}{{ site.baseurl }}/allnews.html" class="text-link">All news <span class="arrow">→</span></a>
+      </div>
+    </header>
+    <div class="news-list">
+      {% for article in site.data.news limit:5 %}
+      <div class="news-row">
+        <span class="news-date">{{ article.date }}</span>
+        <div class="news-body">{{ article.headline | markdownify }}</div>
+      </div>
+      {% endfor %}
     </div>
   </section>
 
   <!-- RECENT PUBLICATIONS -->
-  <section class="split-section fade-up delay-3">
-    <div class="split-side">
-      <span class="eyebrow">Selected</span>
-      <h2 class="split-title">Recent publications.</h2>
-      <p style="margin-top: 14px;">
+  <section class="section-block fade-up delay-3">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">Selected</span>
+        <h2 class="head-title">Recent publications.</h2>
+      </div>
+      <div class="head-side">
         <a href="{{ site.url }}{{ site.baseurl }}/publications" class="text-link">All {{ site.data.publist.size }} papers <span class="arrow">→</span></a>
-      </p>
-    </div>
-    <div>
+      </div>
+    </header>
+    <div class="featured-pubs">
       {% assign featured_count = 0 %}
       {% for publi in site.data.publist %}
-        {% if publi.highlight == 1 and featured_count < 5 %}
+        {% if publi.highlight == 1 and featured_count < 6 %}
           {% assign venue_short = publi.link.display | split: ',' | first | split: '(' | first | strip %}
-          <div class="publication-row">
-            <div class="publication-index">{{ venue_short | split: ' ' | last }}</div>
-            <div>
-              <h3 class="publication-title">
-                {% if publi.link.url and publi.link.url != "" %}
-                  <a href="{{ publi.link.url }}" target="_blank" rel="noopener">{{ publi.title }}</a>
-                {% else %}
-                  {{ publi.title }}
-                {% endif %}
-              </h3>
-              <p class="publication-authors">{{ publi.authors }}</p>
-              <p class="publication-venue">{{ venue_short }}</p>
-            </div>
-          </div>
+          <article class="featured-pub-card">
+            <span class="featured-pub-venue">{{ venue_short }}</span>
+            <h3 class="featured-pub-title">
+              {% if publi.link.url and publi.link.url != "" %}
+                <a href="{{ publi.link.url }}" target="_blank" rel="noopener">{{ publi.title }}</a>
+              {% else %}
+                {{ publi.title }}
+              {% endif %}
+            </h3>
+            <p class="featured-pub-authors">{{ publi.authors }}</p>
+          </article>
           {% assign featured_count = featured_count | plus: 1 %}
         {% endif %}
       {% endfor %}
@@ -160,11 +164,13 @@ permalink: /
   </section>
 
   <!-- EVENTS -->
-  <section class="split-section fade-up delay-3" style="border-bottom: none;">
-    <div class="split-side">
-      <span class="eyebrow">Tutorials &amp; workshops</span>
-      <h2 class="split-title">Events we're<br>organizing.</h2>
-    </div>
+  <section class="section-block fade-up delay-3 no-rule">
+    <header class="section-block-head">
+      <div class="head-main">
+        <span class="eyebrow head-eyebrow">Tutorials &amp; workshops</span>
+        <h2 class="head-title">Events we're organizing.</h2>
+      </div>
+    </header>
     <div>
       <div class="events-grid" style="margin-top: 0;">
         <article class="event-card">
