@@ -1,3 +1,16 @@
+- date: May. 2026
+  headline: |
+    Congratulations to several of our students for their papers accepted by ICML 2026, KDD 2026, ACL 2026, and CHI 2026!
+
+    - *ProbeLLM: Automating Principled Diagnosis of LLM Failures* — ICML 2026
+    - *Agent Training vs Induced Risks!* — ICML 2026
+    - *Recipes for Agents: Understanding Skills and Their Open Questions* — KDD 2026 Blue Sky Ideas
+    - *Flow Matching + Reaction Prediction* — KDD 2026 AI4Sciences
+    - *Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training* — ACL 2026
+    - *A Survey of Multimodal Mathematical Reasoning: From Perception, Alignment to Reasoning* — ACL 2026
+    - *Guardian-as-an-Advisor: Advancing Next-Generation Guardian Models for Trustworthy LLMs* — ACL 2026 Findings
+    - *My Favorite Streamer is an LLM: Discovering, Bonding, and Co-Creating in AI VTuber Fandom* — CHI 2026 (**Honourable Mention Award**)
+
 - date: Mar. 2026
   headline: "Call for papers! We are co-organizing several workshops: [KDD 2026 Workshop on Agentic AI for Scientific and Societal Advances](https://openreview.net/group?id=KDD.org/2026/Workshop/SciSoc_Agents_and_LLMs), [KDD 2026 Workshop on Reliable Scientific Foundation Models (RelSciFM)](https://kdd26-relscifm.github.io/), [AI for Education Day at KDD 2026](https://sites.google.com/view/aiedkdd26), [CVPR 2026 – 2nd Workshop on Knowledge-Intensive Multimodal Reasoning](https://knowledgemr-workshop.github.io/), and the upcoming ICML 2026 Workshop on AI for Physics (AI4Physics). Welcome submissions!"
 
